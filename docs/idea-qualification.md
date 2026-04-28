@@ -89,6 +89,51 @@ Bad V1 shape:
 - depends on vague LLM quality
 - needs a marketplace or network effect before it is useful
 
+
+## Research Protocol For Agents
+
+Agents qualifying an idea should use browsing and search tools before marking an idea `ready`.
+
+Use the fastest reliable source first, then deepen only when the signal is weak or unclear.
+
+Recommended tool pattern:
+
+1. Use web search to find adjacent tools, GitHub repos, blog posts, Hacker News threads, Reddit posts, docs, and forum discussions.
+2. Use browser or page fetch tools to inspect the highest-signal results directly.
+3. Prefer primary sources over summaries: GitHub repos, issue trackers, official docs, release notes, and maintainer posts.
+4. Capture links and observed signals in the PRD. Do not rely on vibes.
+5. If research is inconclusive, keep the idea in `backlog` and document the missing evidence.
+
+Minimum research before moving to `ready`:
+
+- at least 3 competitor or adjacent-tool searches
+- at least 2 direct source inspections, such as GitHub repos, docs, or issue threads
+- at least 1 demand signal, such as stars, forks, open issues, forum discussion, repeated workflow pain, or Roger's own sprint pain
+- a short note explaining why this idea is meaningfully different from existing tools
+
+Suggested searches:
+
+```text
+<idea keyword> github
+<idea keyword> cli tool
+<idea keyword> developer workflow
+<idea keyword> ai agent workflow
+<problem phrase> github issues
+<problem phrase> hacker news
+<problem phrase> reddit
+```
+
+When inspecting GitHub repos, record:
+
+- URL
+- stars/forks if visible
+- last meaningful commit or release if visible
+- issue/discussion signals
+- what the repo does well
+- what gap remains for this idea
+
+Do not fabricate star counts, dates, or demand signals. If a tool cannot access live data, write `not checked` or `could not verify`.
+
 ## Required Research Notes
 
 Each idea PRD should include a `Qualification` section with:
