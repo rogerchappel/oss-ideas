@@ -1,6 +1,6 @@
 # PRD: repoforge
 
-Status: ready
+Status: in-progress
 
 ## Scorecard
 
