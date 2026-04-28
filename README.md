@@ -1,6 +1,8 @@
 # oss-ideas
 
-A public idea bank for open-source projects around agentic engineering, high-throughput software teams, and developer tooling.
+A public idea bank for Roger Chappell's open-source project ideas around agentic engineering, high-throughput software teams, and developer tooling.
+
+These are Roger's ideas, but they are intentionally public. You are welcome to build any of them yourself. Please change the name before shipping your own version, and optional attribution back to [Roger's GitHub profile](https://github.com/rogerchappel) is appreciated if the idea helped you.
 
 This repo turns rough OSS ideas into scoped PRDs that agents can build from.
 
@@ -20,12 +22,13 @@ This repository is the source of truth for:
 
 ## Idea Structure
 
-Ideas move through three lifecycle folders:
+Ideas move through lifecycle folders:
 
 ```text
-ideas/backlog/<project-name>/PRD.md  # rough idea, not ready for agents
-ideas/ready/<project-name>/PRD.md    # scoped and ready to build
-ideas/built/<project-name>/PRD.md    # repo exists or V1 has shipped
+ideas/backlog/<project-name>/PRD.md      # rough idea, not ready for agents
+ideas/ready/<project-name>/PRD.md        # scoped and ready to build
+ideas/in-progress/<project-name>/PRD.md  # active build underway
+ideas/built/<project-name>/PRD.md        # repo exists or V1 has shipped
 ```
 
 Optional supporting files can be added later:
@@ -52,12 +55,11 @@ Use [`templates/idea-prd.md`](templates/idea-prd.md) for new ideas.
 
 ## Current Ideas
 
-- [repoforge](ideas/ready/repoforge/PRD.md) — one-command OSS repo factory
-- [atomcommit](ideas/ready/atomcommit/PRD.md) — messy diff to atomic commit plan
-- [qualitygate](ideas/ready/qualitygate/PRD.md) — portable verification/report gate
-- [prpack](ideas/ready/prpack/PRD.md) — PR handoff pack generator
-- [ossmeter](ideas/ready/ossmeter/PRD.md) — OSS sprint velocity and quality scoreboard
-- [agentlane](ideas/ready/agentlane/PRD.md) — safe parallel agent work lanes
+See the lifecycle folders for the full scored backlog:
+
+- [`ideas/ready`](ideas/ready/) — scoped and ready to build
+- [`ideas/in-progress`](ideas/in-progress/) — active builds underway
+- [`ideas/built`](ideas/built/) — repos that exist or V1s that have shipped
 
 ## Principles
 
