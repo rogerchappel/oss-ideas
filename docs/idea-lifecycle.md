@@ -18,6 +18,10 @@ Move an idea to `ready` when it has:
 
 - clear pitch
 - why it matters
+- passed the [Idea Qualification Test](idea-qualification.md)
+- competitor or adjacent-tool research
+- star, issue, discussion, or demand signal where available
+- real problem evidence from Roger's workflow or external developer pain
 - V1 scope
 - out-of-scope list
 - verification requirements

@@ -36,6 +36,20 @@ ideas/<project-name>/agent-prompt.md
 ideas/<project-name>/research.md
 ```
 
+## Qualification
+
+Ideas must pass the [Idea Qualification Test](docs/idea-qualification.md) before moving to `ready`.
+
+The core checks are:
+
+- pub test: can a smart developer understand it quickly?
+- competitor test: are similar or adjacent tools already used?
+- star/demand signal: are there stars, issues, forks, posts, or discussions?
+- real problem test: has Roger or someone external clearly hit this pain?
+- V1 buildability: can an agent build a useful local-first version quickly?
+
+Use [`templates/idea-prd.md`](templates/idea-prd.md) for new ideas.
+
 ## Current Ideas
 
 - [repoforge](ideas/ready/repoforge/PRD.md) — one-command OSS repo factory
