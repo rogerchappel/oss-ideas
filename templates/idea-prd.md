@@ -3,6 +3,22 @@
 Status: backlog
 Decision: backlog
 
+## Scorecard
+
+Total: 0/100
+Band: public backlog | promising | build now | archive
+Last scored: YYYY-MM-DD
+Scored by: <agent or human>
+
+| Criterion | Points | Notes |
+|---|---:|---|
+| Problem pain | 0/20 |  |
+| Demand signal | 0/20 |  |
+| V1 buildability | 0/20 |  |
+| Differentiation | 0/15 |  |
+| Agentic workflow leverage | 0/15 |  |
+| Distribution potential | 0/10 |  |
+
 ## Pitch
 
 One sentence a smart developer can understand quickly.

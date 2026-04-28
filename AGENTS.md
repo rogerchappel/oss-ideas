@@ -192,7 +192,11 @@ Do not maintain a separate scoring folder or central JSON file by default. Separ
 
 Use a central generated index only if automation later needs one, and generate it from PRDs instead of editing it by hand.
 
-Agents triaging or promoting ideas must score them before changing lifecycle state.
+Agents triaging, capturing, or promoting ideas must score them immediately.
+
+If Roger says he has an idea, or an agent proposes a new idea, the idea must be captured with a `## Scorecard` in the same change. Do not leave new idea PRDs unscored and do not wait for a separate scoring request.
+
+Agents must score before changing lifecycle state, and must update the score whenever new evidence materially changes the idea.
 
 Use a 100-point score:
 
