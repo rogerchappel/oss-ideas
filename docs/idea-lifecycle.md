@@ -5,9 +5,10 @@
 ## Folders
 
 ```text
-ideas/backlog/  Rough ideas. Interesting, but not yet scoped enough for an agent.
-ideas/ready/    Scoped PRDs. Clear enough for an agent to build V1.
-ideas/built/    Implemented ideas. Repo exists or V1 shipped.
+ideas/backlog/      Rough ideas. Interesting, but not yet scoped enough for an agent.
+ideas/ready/        Scoped PRDs. Clear enough for an agent to build V1.
+ideas/in-progress/  Active build already underway, but not yet treated as shipped.
+ideas/built/        Implemented ideas. Repo exists or V1 shipped.
 ```
 
 ## Promotion Rules
@@ -27,6 +28,15 @@ Move an idea to `ready` when it has:
 - verification requirements
 - agent prompt
 
+### ready -> in-progress
+
+Move an idea to `in-progress` when:
+
+- build has started
+- repo exists or task is actively assigned
+- V1 is not yet ready to treat as shipped
+- scorecard remains current
+
 ### ready -> built
 
 Move an idea to `built` when:
@@ -44,6 +54,7 @@ Each PRD should include one of:
 ```text
 Status: backlog
 Status: ready
+Status: in-progress
 Status: built
 ```
 
