@@ -2,6 +2,22 @@
 
 Status: ready
 
+## Scorecard
+
+Total: 82/100
+Band: build now
+Last scored: 2026-04-29
+Scored by: Neo
+
+| Criterion | Points | Notes |
+|---|---:|---|
+| Problem pain | 18/20 | PR handoff quality is a recurring failure point, including malformed PR bodies. |
+| Demand signal | 16/20 | Strong internal signal from recent PR formatting issues and review-pack workflow; external validation still needed. |
+| V1 buildability | 18/20 | Can compose git metadata and optional artifacts into Markdown deterministically. |
+| Differentiation | 12/15 | Stronger when paired with branchbrief and qualitygate; less unique standalone. |
+| Agentic workflow leverage | 14/15 | Standardizes agent-to-human review packets. |
+| Distribution potential | 4/10 | Useful but likely needs demos to make the value obvious. |
+
 ## Pitch
 
 Generate a complete PR handoff pack from branchbrief, qualitygate, and git metadata.
