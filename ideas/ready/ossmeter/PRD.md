@@ -2,6 +2,22 @@
 
 Status: ready
 
+## Scorecard
+
+Total: 76/100
+Band: promising
+Last scored: 2026-04-29
+Scored by: Neo
+
+| Criterion | Points | Notes |
+|---|---:|---|
+| Problem pain | 16/20 | Sprint visibility matters, but it is less blocking than repo creation, commits, and verification. |
+| Demand signal | 15/20 | Clear internal demand from Roger's commit velocity scoreboard; external validation still needed. |
+| V1 buildability | 18/20 | Local workspace scanning and reports are feasible. |
+| Differentiation | 10/15 | Many git metric tools exist; quality-weighted OSS sprint framing helps. |
+| Agentic workflow leverage | 11/15 | Helps manage agents indirectly through measurement. |
+| Distribution potential | 6/10 | Scoreboard content could market the OSS sprint well. |
+
 ## Pitch
 
 Measure OSS sprint velocity and quality across repos.
