@@ -84,9 +84,9 @@ git diff --stat
 git status --short
 ```
 
-If the staged or unstaged diff touches more than 8 files, stop and produce a commit split plan before committing.
+If the staged or unstaged diff touches more than 3 files, stop and produce a commit split plan before committing.
 
-A single commit touching more than 8 files is only allowed when one of these is true:
+A single commit touching more than 3 files is only allowed when one of these is true:
 
 - initial repo scaffold
 - generated lockfile/vendor output required by one change
@@ -98,7 +98,7 @@ Otherwise, split the diff into multiple atomic commits.
 
 Do not finish a task with one large commit if the diff contains multiple reviewable intents.
 
-If a PR touches more than 8 files and has only one commit, assume the commit history is wrong and split it before returning the review pack.
+If a PR touches more than 3 files and has only one commit, assume the commit history is wrong and split it before returning the review pack.
 
 ## Commit Policy
 
@@ -285,6 +285,59 @@ Bad PRs:
 - vague summary
 
 Do not merge without explicit human approval.
+
+## PR Body Formatting Gate
+
+When opening or updating a pull request, the PR body must follow `.github/pull_request_template.md` unless the human explicitly asks for a different format.
+
+Do not pass PR bodies or review comments as shell strings containing escaped newlines like `\n`. GitHub will render those literally and the comment is not reviewable.
+
+Use one of these safe patterns instead:
+
+```bash
+cat > /tmp/pr-body.md <<'EOF'
+## Summary
+
+-
+
+## Verification
+
+- [ ] Tests or checks run:
+- [ ] Manual review completed:
+
+## Risk Level
+
+- [ ] Low
+- [ ] Medium
+- [ ] High
+
+Notes:
+
+## Rollback Plan
+
+-
+
+## Human Decision Needed
+
+- [ ] None
+- [ ] Maintainer review
+- [ ] Product/design decision
+- [ ] Security/privacy review
+- [ ] Other:
+EOF
+
+gh pr create --body-file /tmp/pr-body.md
+```
+
+or edit the PR body through a checked-in/generated Markdown file and pass it with `--body-file`.
+
+Before creating or updating a PR, inspect the final rendered source:
+
+```bash
+cat /tmp/pr-body.md
+```
+
+If the preview contains literal `\n`, missing headings, or does not match the repository template, fix it before posting.
 
 ## Stop Before Touching
 
