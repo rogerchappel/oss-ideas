@@ -2,7 +2,7 @@
 
 ## Status
 
-Ready for build. Claim target: move to `ideas/in-progress/stackforge/PRD.md` once the GitHub repo is created and first task batch is queued.
+In progress. GitHub repo setup and first task batch are being created.
 
 ## Summary
 
