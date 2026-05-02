@@ -1,6 +1,6 @@
 # workspacewire
 
-Status: in-progress
+Status: built
 
 ## Scorecard
 
