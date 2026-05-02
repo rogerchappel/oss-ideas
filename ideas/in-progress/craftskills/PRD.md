@@ -1,4 +1,4 @@
-# craftskills
+# Agent Craft Skills
 
 Status: in-progress
 
@@ -20,7 +20,7 @@ Scored by: Neo
 
 ## Pitch
 
-A collection of small, composable engineering skills for agents: clarify scope, split commits, verify locally, review architecture, harden CLIs, and ship polished OSS.
+A hands-on skillbook for coding agents and their operators: reusable habits, checklists, and tiny workflows that make agent-written software easier to trust.
 
 ## Why It Matters
 
@@ -51,4 +51,4 @@ Inspired by the category represented by mattpocock/skills. Do not copy skills, w
 
 ## Agent Prompt
 
-Build `craftskills` as an original engineering-skills collection for agents. Use StackForge, implement a working validator/installer dry-run, docs, tests, smokes, publish, metadata, branch protection.
+Build `agent-craft-skills` with the public title “Agent Craft Skills” and a GitHub description like: “Reusable engineering skills, checklists, and quality loops for coding agents and human operators.” Use StackForge, implement a working validator/installer dry-run, docs, tests, smokes, publish, metadata, branch protection.

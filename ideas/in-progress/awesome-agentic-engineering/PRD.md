@@ -1,4 +1,4 @@
-# awesome-agentic-engineering
+# Awesome Agentic Engineering
 
 Status: in-progress
 
@@ -20,7 +20,7 @@ Scored by: Neo
 
 ## Pitch
 
-A curated, opinionated awesome list for agentic engineering: tools, patterns, safety practices, workflows, testing loops, local-first infrastructure, and production-grade examples.
+A carefully curated field guide to agentic engineering — practical tools, patterns, safety habits, evaluation loops, and real-world examples for people building with coding agents.
 
 ## Why It Matters
 
@@ -52,4 +52,4 @@ Inspired by the awesome-list format and the category represented by sindresorhus
 
 ## Agent Prompt
 
-Build `awesome-agentic-engineering` as an original, high-quality awesome-list repo for agentic engineering. Use StackForge, docs, validation tooling, meaningful commits, publish to GitHub, set metadata, protect main.
+Build `awesome-agentic-engineering` with the public title “Awesome Agentic Engineering” and a GitHub description like: “A practical map of tools, patterns, safety checks, and workflows for building software with coding agents.” Use StackForge, docs, validation tooling, meaningful commits, publish to GitHub, set metadata, protect main.

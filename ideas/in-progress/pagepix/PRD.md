@@ -1,4 +1,4 @@
-# pagepix
+# PagePix
 
 Status: in-progress
 
@@ -20,7 +20,7 @@ Scored by: Neo
 
 ## Pitch
 
-A local-first TypeScript CLI/library that converts HTML and Markdown documents into PNG previews, contact sheets, and visual diff fixtures — a non-.NET cousin to the Morph category.
+A local-first page rendering toolkit for turning Markdown and HTML into dependable PNG previews, contact sheets, release-note images, and visual regression fixtures.
 
 ## Why It Matters
 
@@ -53,4 +53,4 @@ Inspired by the document-to-image category represented by SimonCropp/Morph. Do n
 
 ## Agent Prompt
 
-Build `pagepix` as an original non-.NET document/page-to-image TypeScript CLI/library inspired by the Morph category. Use StackForge, docs, tests, smokes, publish, metadata, branch protection.
+Build `PagePix` / repo `pagepix` as an original non-.NET document/page-to-image TypeScript CLI/library inspired by the Morph category, with a GitHub description like: “Render Markdown and HTML into preview images, contact sheets, and visual test fixtures from a local-first TypeScript CLI.” Use StackForge, docs, tests, smokes, publish, metadata, branch protection.

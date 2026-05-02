@@ -1,4 +1,4 @@
-# learnstash
+# The Developer Learning Stash
 
 Status: in-progress
 
@@ -20,7 +20,7 @@ Scored by: Neo
 
 ## Pitch
 
-A curated, validated catalog of free learning resources for modern developer tooling and agentic engineering — books, courses, guides, labs, and references with quality metadata.
+A focused catalog of genuinely useful free learning material for modern software builders — less “everything on the internet”, more annotated paths through agentic engineering, tooling, testing, OSS, and maintainership.
 
 ## Why It Matters
 
@@ -51,4 +51,4 @@ Inspired by the broad free-programming-resources category represented by EbookFo
 
 ## Agent Prompt
 
-Build `learnstash` as an original free developer-learning resource catalog. Use StackForge, schema-driven generation/validation, docs, tests, smokes, publish, metadata, branch protection.
+Build `developer-learning-stash` with the public title “The Developer Learning Stash” and a GitHub description like: “Annotated free learning paths for agentic engineering, developer tooling, testing, docs, and OSS maintainership.” Use StackForge, schema-driven generation/validation, docs, tests, smokes, publish, metadata, branch protection.
