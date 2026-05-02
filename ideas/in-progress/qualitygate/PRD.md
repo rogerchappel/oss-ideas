@@ -1,6 +1,6 @@
 # PRD: qualitygate
 
-Status: ready
+Status: in-progress
 
 ## Scorecard
 

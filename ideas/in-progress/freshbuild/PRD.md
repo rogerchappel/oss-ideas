@@ -1,6 +1,6 @@
 # freshbuild
 
-Status: ready
+Status: in-progress
 
 ## Scorecard
 

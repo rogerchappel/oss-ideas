@@ -1,6 +1,6 @@
 # PRD: atomcommit
 
-Status: ready
+Status: in-progress
 
 ## Scorecard
 
