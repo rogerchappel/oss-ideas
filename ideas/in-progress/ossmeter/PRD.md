@@ -1,6 +1,6 @@
 # PRD: ossmeter
 
-Status: ready
+Status: in-progress
 
 ## Scorecard
 
