@@ -1,6 +1,6 @@
 # tapship
 
-Status: ready
+Status: in-progress
 
 ## Scorecard
 

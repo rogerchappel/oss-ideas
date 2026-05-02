@@ -1,6 +1,6 @@
 # tailmux
 
-Status: ready
+Status: in-progress
 
 ## Scorecard
 
