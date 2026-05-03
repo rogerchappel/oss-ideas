@@ -1,7 +1,7 @@
-# airgapquery
+# actionloom
 
-Status: backlog
-Decision: backlog
+Status: in-progress
+Decision: build now
 
 ## Scorecard
 
@@ -21,7 +21,7 @@ Scored by: Neo
 
 ## Pitch
 
-A privacy-first offline RAG starter kit that verifies a document QA stack can run without network access.
+A GitHub Actions workflow generator and auditor for small OSS repos, with local linting and safety checklists.
 
 ## Why It Matters
 
@@ -35,7 +35,7 @@ Can this be explained clearly in one sentence to local-first or agentic-tooling 
 
 ### Competitors / Adjacent Tools
 
-- `airgapped-offfline-rag` — source inspiration: https://github.com/vincentkoc/airgapped-offfline-rag (Python, stars/forks signal: 83).
+- `hip-actions` — source inspiration: https://github.com/vincentkoc/hip-actions (JavaScript, stars/forks signal: not listed).
 
 ### Star / Demand Signal
 
@@ -51,10 +51,10 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 
 ## V1 Scope
 
-- Local document ingestion fixtures
-- Offline retrieval/query smoke tests
-- Network-disabled verification script
-- Deployment checklist for private docs
+- Generate workflow templates
+- Audit existing workflows for risky permissions
+- Validate matrix and cache config
+- Emit PR-ready recommendations
 
 ## Out of Scope
 
@@ -65,8 +65,8 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 ## CLI/API Sketch
 
 ```bash
-airgapquery --help
-airgapquery inspect ./fixtures/sample --output ./out
+actionloom --help
+actionloom inspect ./fixtures/sample --output ./out
 ```
 
 ## Verification
@@ -78,4 +78,4 @@ airgapquery inspect ./fixtures/sample --output ./out
 
 ## Agent Prompt
 
-Build `airgapquery` as a renamed, local-first OSS idea inspired by `airgapped-offfline-rag`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
+Build `actionloom` as a renamed, local-first OSS idea inspired by `hip-actions`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.

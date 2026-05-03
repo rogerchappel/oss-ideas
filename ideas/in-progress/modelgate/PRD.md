@@ -1,7 +1,7 @@
 # modelgate
 
-Status: backlog
-Decision: backlog
+Status: in-progress
+Decision: build now
 
 ## Scorecard
 
