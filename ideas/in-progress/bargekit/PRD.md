@@ -1,6 +1,6 @@
 # bargekit
 
-Status: ready
+Status: in-progress
 Decision: promising
 
 ## Scorecard

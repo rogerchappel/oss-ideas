@@ -1,7 +1,6 @@
 # PRD: agentlane
 
 Status: in-progress
-
 ## Scorecard
 
 Total: 79/100

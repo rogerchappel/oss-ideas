@@ -1,6 +1,6 @@
 # agentglow
 
-Status: ready
+Status: in-progress
 Decision: build now
 
 ## Scorecard
