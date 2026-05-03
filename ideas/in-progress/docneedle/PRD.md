@@ -1,7 +1,7 @@
-# contextloom
+# docneedle
 
-Status: backlog
-Decision: backlog
+Status: in-progress
+Decision: build now
 
 ## Scorecard
 
@@ -21,7 +21,7 @@ Scored by: Neo
 
 ## Pitch
 
-A lossless context manager for agent sessions that turns long traces into retrievable chunks without dropping citations.
+A local mini search engine for project docs, notes, and agent memory folders with fast CLI lookup.
 
 ## Why It Matters
 
@@ -35,7 +35,7 @@ Can this be explained clearly in one sentence to local-first or agentic-tooling 
 
 ### Competitors / Adjacent Tools
 
-- `lossless-claw fork` — source inspiration: https://github.com/vincentkoc/lossless-claw (TypeScript, stars/forks signal: not listed).
+- `qmd fork` — source inspiration: https://github.com/vincentkoc/qmd (TypeScript, stars/forks signal: not listed).
 
 ### Star / Demand Signal
 
@@ -51,10 +51,10 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 
 ## V1 Scope
 
-- Chunk session/tool transcripts
-- Build manifest with stable offsets
-- Retrieve exact excerpts by query/id
-- Validate no-loss round trips on fixtures
+- Index Markdown/text files locally
+- Search with snippets and source paths
+- Watch/rebuild manifest
+- Export search pack for agents
 
 ## Out of Scope
 
@@ -65,8 +65,8 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 ## CLI/API Sketch
 
 ```bash
-contextloom --help
-contextloom inspect ./fixtures/sample --output ./out
+docneedle --help
+docneedle inspect ./fixtures/sample --output ./out
 ```
 
 ## Verification
@@ -78,4 +78,4 @@ contextloom inspect ./fixtures/sample --output ./out
 
 ## Agent Prompt
 
-Build `contextloom` as a renamed, local-first OSS idea inspired by `lossless-claw fork`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
+Build `docneedle` as a renamed, local-first OSS idea inspired by `qmd fork`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
