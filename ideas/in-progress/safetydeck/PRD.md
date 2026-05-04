@@ -1,7 +1,7 @@
-# tapline
+# safetydeck
 
-Status: backlog
-Decision: backlog
+Status: in-progress
+Decision: in-progress
 
 ## Scorecard
 
@@ -21,7 +21,7 @@ Scored by: Neo
 
 ## Pitch
 
-A tiny tap-management helper that standardises local Homebrew tap maintenance, formula linting, and release notes.
+A personal/team security checklist generator that turns best-practice items into local Markdown action plans.
 
 ## Why It Matters
 
@@ -35,7 +35,7 @@ Can this be explained clearly in one sentence to local-first or agentic-tooling 
 
 ### Competitors / Adjacent Tools
 
-- `tap` — source inspiration: https://github.com/vincentkoc/tap (Ruby, stars/forks signal: not listed).
+- `security-checklist fork` — source inspiration: https://github.com/vincentkoc/security-checklist (JavaScript, stars/forks signal: not listed).
 
 ### Star / Demand Signal
 
@@ -51,10 +51,10 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 
 ## V1 Scope
 
-- Inspect local tap repositories
-- Generate formula maintenance checklist
-- Run dry-run validation commands
-- Emit copy-paste release notes
+- Checklist template library
+- Profile-based recommendations
+- Markdown progress tracker
+- No account scanning by default
 
 ## Out of Scope
 
@@ -65,8 +65,8 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 ## CLI/API Sketch
 
 ```bash
-tapline --help
-tapline inspect ./fixtures/sample --output ./out
+safetydeck --help
+safetydeck inspect ./fixtures/sample --output ./out
 ```
 
 ## Verification
@@ -78,4 +78,4 @@ tapline inspect ./fixtures/sample --output ./out
 
 ## Agent Prompt
 
-Build `tapline` as a renamed, local-first OSS idea inspired by `tap`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
+Build `safetydeck` as a renamed, local-first OSS idea inspired by `security-checklist fork`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.

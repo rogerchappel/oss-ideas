@@ -1,7 +1,7 @@
 # statecraft
 
-Status: backlog
-Decision: backlog
+Status: in-progress
+Decision: in-progress
 
 ## Scorecard
 

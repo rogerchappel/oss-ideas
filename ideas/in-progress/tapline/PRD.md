@@ -1,7 +1,7 @@
-# devcard
+# tapline
 
-Status: backlog
-Decision: backlog
+Status: in-progress
+Decision: in-progress
 
 ## Scorecard
 
@@ -21,7 +21,7 @@ Scored by: Neo
 
 ## Pitch
 
-A developer profile README generator that turns projects, links, and stats into a clean maintainable personal landing page.
+A tiny tap-management helper that standardises local Homebrew tap maintenance, formula linting, and release notes.
 
 ## Why It Matters
 
@@ -35,7 +35,7 @@ Can this be explained clearly in one sentence to local-first or agentic-tooling 
 
 ### Competitors / Adjacent Tools
 
-- `vincentkoc profile repo` — source inspiration: https://github.com/vincentkoc/vincentkoc (JavaScript, stars/forks signal: 6).
+- `tap` — source inspiration: https://github.com/vincentkoc/tap (Ruby, stars/forks signal: not listed).
 
 ### Star / Demand Signal
 
@@ -51,10 +51,10 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 
 ## V1 Scope
 
-- Read local profile config
-- Render README sections
-- Validate links/images
-- Generate update checklist
+- Inspect local tap repositories
+- Generate formula maintenance checklist
+- Run dry-run validation commands
+- Emit copy-paste release notes
 
 ## Out of Scope
 
@@ -65,8 +65,8 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 ## CLI/API Sketch
 
 ```bash
-devcard --help
-devcard inspect ./fixtures/sample --output ./out
+tapline --help
+tapline inspect ./fixtures/sample --output ./out
 ```
 
 ## Verification
@@ -78,4 +78,4 @@ devcard inspect ./fixtures/sample --output ./out
 
 ## Agent Prompt
 
-Build `devcard` as a renamed, local-first OSS idea inspired by `vincentkoc profile repo`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
+Build `tapline` as a renamed, local-first OSS idea inspired by `tap`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
