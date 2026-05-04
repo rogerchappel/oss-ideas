@@ -1,7 +1,7 @@
-# safetydeck
+# skillcrate
 
-Status: backlog
-Decision: backlog
+Status: in-progress
+Decision: in-progress
 
 ## Scorecard
 
@@ -21,7 +21,7 @@ Scored by: Neo
 
 ## Pitch
 
-A personal/team security checklist generator that turns best-practice items into local Markdown action plans.
+A cross-agent skill package format and registry exporter for moving reusable instructions between agent ecosystems.
 
 ## Why It Matters
 
@@ -35,7 +35,7 @@ Can this be explained clearly in one sentence to local-first or agentic-tooling 
 
 ### Competitors / Adjacent Tools
 
-- `security-checklist fork` — source inspiration: https://github.com/vincentkoc/security-checklist (JavaScript, stars/forks signal: not listed).
+- `skills fork` — source inspiration: https://github.com/vincentkoc/skills (TypeScript, stars/forks signal: not listed).
 
 ### Star / Demand Signal
 
@@ -51,10 +51,10 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 
 ## V1 Scope
 
-- Checklist template library
-- Profile-based recommendations
-- Markdown progress tracker
-- No account scanning by default
+- Parse skill metadata
+- Pack/unpack skill folders
+- Generate registry index
+- Compatibility checks for common agent targets
 
 ## Out of Scope
 
@@ -65,8 +65,8 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 ## CLI/API Sketch
 
 ```bash
-safetydeck --help
-safetydeck inspect ./fixtures/sample --output ./out
+skillcrate --help
+skillcrate inspect ./fixtures/sample --output ./out
 ```
 
 ## Verification
@@ -78,4 +78,4 @@ safetydeck inspect ./fixtures/sample --output ./out
 
 ## Agent Prompt
 
-Build `safetydeck` as a renamed, local-first OSS idea inspired by `security-checklist fork`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
+Build `skillcrate` as a renamed, local-first OSS idea inspired by `skills fork`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.

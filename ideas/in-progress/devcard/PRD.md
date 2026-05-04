@@ -1,7 +1,7 @@
-# skillcrate
+# devcard
 
-Status: backlog
-Decision: backlog
+Status: in-progress
+Decision: in-progress
 
 ## Scorecard
 
@@ -21,7 +21,7 @@ Scored by: Neo
 
 ## Pitch
 
-A cross-agent skill package format and registry exporter for moving reusable instructions between agent ecosystems.
+A developer profile README generator that turns projects, links, and stats into a clean maintainable personal landing page.
 
 ## Why It Matters
 
@@ -35,7 +35,7 @@ Can this be explained clearly in one sentence to local-first or agentic-tooling 
 
 ### Competitors / Adjacent Tools
 
-- `skills fork` — source inspiration: https://github.com/vincentkoc/skills (TypeScript, stars/forks signal: not listed).
+- `vincentkoc profile repo` — source inspiration: https://github.com/vincentkoc/vincentkoc (JavaScript, stars/forks signal: 6).
 
 ### Star / Demand Signal
 
@@ -51,10 +51,10 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 
 ## V1 Scope
 
-- Parse skill metadata
-- Pack/unpack skill folders
-- Generate registry index
-- Compatibility checks for common agent targets
+- Read local profile config
+- Render README sections
+- Validate links/images
+- Generate update checklist
 
 ## Out of Scope
 
@@ -65,8 +65,8 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 ## CLI/API Sketch
 
 ```bash
-skillcrate --help
-skillcrate inspect ./fixtures/sample --output ./out
+devcard --help
+devcard inspect ./fixtures/sample --output ./out
 ```
 
 ## Verification
@@ -78,4 +78,4 @@ skillcrate inspect ./fixtures/sample --output ./out
 
 ## Agent Prompt
 
-Build `skillcrate` as a renamed, local-first OSS idea inspired by `skills fork`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
+Build `devcard` as a renamed, local-first OSS idea inspired by `vincentkoc profile repo`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
