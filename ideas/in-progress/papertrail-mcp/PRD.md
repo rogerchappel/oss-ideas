@@ -1,6 +1,6 @@
-# qasmoke
+# papertrail-mcp
 
-Status: backlog
+Status: in-progress
 Decision: backlog
 
 ## Scorecard
@@ -21,7 +21,7 @@ Scored by: Neo
 
 ## Pitch
 
-A micro QA benchmark harness for ultra-fast LLM regression smoke tests in CI.
+An MCP-friendly academic paper search cache that records queries, sources, citations, and download provenance for agents.
 
 ## Why It Matters
 
@@ -35,7 +35,7 @@ Can this be explained clearly in one sentence to local-first or agentic-tooling 
 
 ### Competitors / Adjacent Tools
 
-- `tiny_qa_benchmark_pp` — source inspiration: https://github.com/vincentkoc/tiny_qa_benchmark_pp (Python, stars/forks signal: 14).
+- `paper-search-plus-mcp` — source inspiration: https://github.com/vincentkoc/paper-search-plus-mcp (Python, stars/forks signal: 1).
 
 ### Star / Demand Signal
 
@@ -51,10 +51,10 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 
 ## V1 Scope
 
-- Small gold QA fixture packs
-- CLI runner for model/provider adapters
-- Scoring and regression threshold report
-- Synthetic pack generator with provenance
+- Search-result schema and fixtures
+- Local cache/index of paper metadata
+- Citation/provenance Markdown export
+- MCP tool surface for query and retrieve
 
 ## Out of Scope
 
@@ -65,8 +65,8 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 ## CLI/API Sketch
 
 ```bash
-qasmoke --help
-qasmoke inspect ./fixtures/sample --output ./out
+papertrail-mcp --help
+papertrail-mcp inspect ./fixtures/sample --output ./out
 ```
 
 ## Verification
@@ -78,4 +78,4 @@ qasmoke inspect ./fixtures/sample --output ./out
 
 ## Agent Prompt
 
-Build `qasmoke` as a renamed, local-first OSS idea inspired by `tiny_qa_benchmark_pp`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
+Build `papertrail-mcp` as a renamed, local-first OSS idea inspired by `paper-search-plus-mcp`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.

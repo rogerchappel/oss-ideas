@@ -1,6 +1,6 @@
 # PRD: skillforge
 
-Status: backlog
+Status: in-progress
 Decision: backlog
 
 ## Scorecard

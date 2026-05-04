@@ -1,6 +1,6 @@
-# tokenpress
+# qasmoke
 
-Status: backlog
+Status: in-progress
 Decision: backlog
 
 ## Scorecard
@@ -21,7 +21,7 @@ Scored by: Neo
 
 ## Pitch
 
-A terminal-output compactor that trims noisy agent logs into lean, evidence-preserving context blocks.
+A micro QA benchmark harness for ultra-fast LLM regression smoke tests in CI.
 
 ## Why It Matters
 
@@ -35,7 +35,7 @@ Can this be explained clearly in one sentence to local-first or agentic-tooling 
 
 ### Competitors / Adjacent Tools
 
-- `tokenjuice` — source inspiration: https://github.com/vincentkoc/tokenjuice (TypeScript, stars/forks signal: 158).
+- `tiny_qa_benchmark_pp` — source inspiration: https://github.com/vincentkoc/tiny_qa_benchmark_pp (Python, stars/forks signal: 14).
 
 ### Star / Demand Signal
 
@@ -51,10 +51,10 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 
 ## V1 Scope
 
-- Parse terminal-heavy transcripts
-- Preserve commands, errors, file paths, and decisions
-- Emit compact Markdown/JSON summaries
-- Adapters for OpenClaw/Codex-style logs
+- Small gold QA fixture packs
+- CLI runner for model/provider adapters
+- Scoring and regression threshold report
+- Synthetic pack generator with provenance
 
 ## Out of Scope
 
@@ -65,8 +65,8 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 ## CLI/API Sketch
 
 ```bash
-tokenpress --help
-tokenpress inspect ./fixtures/sample --output ./out
+qasmoke --help
+qasmoke inspect ./fixtures/sample --output ./out
 ```
 
 ## Verification
@@ -78,4 +78,4 @@ tokenpress inspect ./fixtures/sample --output ./out
 
 ## Agent Prompt
 
-Build `tokenpress` as a renamed, local-first OSS idea inspired by `tokenjuice`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
+Build `qasmoke` as a renamed, local-first OSS idea inspired by `tiny_qa_benchmark_pp`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.

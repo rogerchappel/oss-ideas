@@ -1,6 +1,6 @@
-# papertrail-mcp
+# tokenpress
 
-Status: backlog
+Status: in-progress
 Decision: backlog
 
 ## Scorecard
@@ -21,7 +21,7 @@ Scored by: Neo
 
 ## Pitch
 
-An MCP-friendly academic paper search cache that records queries, sources, citations, and download provenance for agents.
+A terminal-output compactor that trims noisy agent logs into lean, evidence-preserving context blocks.
 
 ## Why It Matters
 
@@ -35,7 +35,7 @@ Can this be explained clearly in one sentence to local-first or agentic-tooling 
 
 ### Competitors / Adjacent Tools
 
-- `paper-search-plus-mcp` — source inspiration: https://github.com/vincentkoc/paper-search-plus-mcp (Python, stars/forks signal: 1).
+- `tokenjuice` — source inspiration: https://github.com/vincentkoc/tokenjuice (TypeScript, stars/forks signal: 158).
 
 ### Star / Demand Signal
 
@@ -51,10 +51,10 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 
 ## V1 Scope
 
-- Search-result schema and fixtures
-- Local cache/index of paper metadata
-- Citation/provenance Markdown export
-- MCP tool surface for query and retrieve
+- Parse terminal-heavy transcripts
+- Preserve commands, errors, file paths, and decisions
+- Emit compact Markdown/JSON summaries
+- Adapters for OpenClaw/Codex-style logs
 
 ## Out of Scope
 
@@ -65,8 +65,8 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 ## CLI/API Sketch
 
 ```bash
-papertrail-mcp --help
-papertrail-mcp inspect ./fixtures/sample --output ./out
+tokenpress --help
+tokenpress inspect ./fixtures/sample --output ./out
 ```
 
 ## Verification
@@ -78,4 +78,4 @@ papertrail-mcp inspect ./fixtures/sample --output ./out
 
 ## Agent Prompt
 
-Build `papertrail-mcp` as a renamed, local-first OSS idea inspired by `paper-search-plus-mcp`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
+Build `tokenpress` as a renamed, local-first OSS idea inspired by `tokenjuice`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
