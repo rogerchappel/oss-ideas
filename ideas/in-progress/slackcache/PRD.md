@@ -1,6 +1,6 @@
-# ledgerpet
+# slackcache
 
-Status: backlog
+Status: in-progress
 Decision: backlog
 
 ## Scorecard
@@ -21,7 +21,7 @@ Scored by: Neo
 
 ## Pitch
 
-A playful finance-ops anomaly trainer that turns invoices, vendors, and payments into safe synthetic agent exercises.
+A local Slack archive terminal tool that syncs selected workspace data into SQLite for fast search and agent handoff.
 
 ## Why It Matters
 
@@ -35,7 +35,7 @@ Can this be explained clearly in one sentence to local-first or agentic-tooling 
 
 ### Competitors / Adjacent Tools
 
-- `finagotchi` — source inspiration: https://github.com/vincentkoc/finagotchi (TypeScript, stars/forks signal: 6).
+- `slacrawl` — source inspiration: https://github.com/vincentkoc/slacrawl (Go, stars/forks signal: 157).
 
 ### Star / Demand Signal
 
@@ -51,10 +51,10 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 
 ## V1 Scope
 
-- Load synthetic finance fixtures
-- Generate anomaly scenarios
-- Score agent findings
-- Avoid real financial data by default
+- Import Slack export/API fixture data
+- Build SQLite message/channel/user index
+- Terminal search and thread view
+- Privacy-first redaction and scope reporting
 
 ## Out of Scope
 
@@ -65,8 +65,8 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 ## CLI/API Sketch
 
 ```bash
-ledgerpet --help
-ledgerpet inspect ./fixtures/sample --output ./out
+slackcache --help
+slackcache inspect ./fixtures/sample --output ./out
 ```
 
 ## Verification
@@ -78,4 +78,4 @@ ledgerpet inspect ./fixtures/sample --output ./out
 
 ## Agent Prompt
 
-Build `ledgerpet` as a renamed, local-first OSS idea inspired by `finagotchi`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
+Build `slackcache` as a renamed, local-first OSS idea inspired by `slacrawl`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.

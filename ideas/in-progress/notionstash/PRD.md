@@ -1,6 +1,6 @@
-# crawlforge
+# notionstash
 
-Status: backlog
+Status: in-progress
 Decision: backlog
 
 ## Scorecard
@@ -21,7 +21,7 @@ Scored by: Neo
 
 ## Pitch
 
-A crawler toolkit for building local-first content ingesters with resumable queues, politeness rules, and deterministic outputs.
+A local-first Notion export crawler that normalises pages into SQLite plus agent-ready Markdown bundles.
 
 ## Why It Matters
 
@@ -35,7 +35,7 @@ Can this be explained clearly in one sentence to local-first or agentic-tooling 
 
 ### Competitors / Adjacent Tools
 
-- `crawlkit` — source inspiration: https://github.com/vincentkoc/crawlkit (Go, stars/forks signal: not listed).
+- `notcrawl` — source inspiration: https://github.com/vincentkoc/notcrawl (Go, stars/forks signal: 75).
 
 ### Star / Demand Signal
 
@@ -51,10 +51,10 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 
 ## V1 Scope
 
-- URL queue and dedupe primitives
-- Robots/politeness config fixtures
-- Markdown/JSON output writers
-- Replayable crawl manifests
+- Import Notion export fixtures
+- Normalize pages, blocks, links, and attachments
+- Write SQLite index and Markdown tree
+- Generate source-linked crawl summary
 
 ## Out of Scope
 
@@ -65,8 +65,8 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 ## CLI/API Sketch
 
 ```bash
-crawlforge --help
-crawlforge inspect ./fixtures/sample --output ./out
+notionstash --help
+notionstash inspect ./fixtures/sample --output ./out
 ```
 
 ## Verification
@@ -78,4 +78,4 @@ crawlforge inspect ./fixtures/sample --output ./out
 
 ## Agent Prompt
 
-Build `crawlforge` as a renamed, local-first OSS idea inspired by `crawlkit`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
+Build `notionstash` as a renamed, local-first OSS idea inspired by `notcrawl`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.

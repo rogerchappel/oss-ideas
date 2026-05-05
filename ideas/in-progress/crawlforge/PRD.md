@@ -1,6 +1,6 @@
-# opikprobe
+# crawlforge
 
-Status: backlog
+Status: in-progress
 Decision: backlog
 
 ## Scorecard
@@ -21,7 +21,7 @@ Scored by: Neo
 
 ## Pitch
 
-A tiny MCP observability probe that tests tracing/evaluation integrations with deterministic fixture calls.
+A crawler toolkit for building local-first content ingesters with resumable queues, politeness rules, and deterministic outputs.
 
 ## Why It Matters
 
@@ -35,7 +35,7 @@ Can this be explained clearly in one sentence to local-first or agentic-tooling 
 
 ### Competitors / Adjacent Tools
 
-- `test-opik-mcp` — source inspiration: https://github.com/vincentkoc/test-opik-mcp (TypeScript, stars/forks signal: not listed).
+- `crawlkit` — source inspiration: https://github.com/vincentkoc/crawlkit (Go, stars/forks signal: not listed).
 
 ### Star / Demand Signal
 
@@ -51,10 +51,10 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 
 ## V1 Scope
 
-- Mock MCP tool calls
-- Emit trace/eval fixture events
-- Validate expected telemetry fields
-- Generate integration report
+- URL queue and dedupe primitives
+- Robots/politeness config fixtures
+- Markdown/JSON output writers
+- Replayable crawl manifests
 
 ## Out of Scope
 
@@ -65,8 +65,8 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 ## CLI/API Sketch
 
 ```bash
-opikprobe --help
-opikprobe inspect ./fixtures/sample --output ./out
+crawlforge --help
+crawlforge inspect ./fixtures/sample --output ./out
 ```
 
 ## Verification
@@ -78,4 +78,4 @@ opikprobe inspect ./fixtures/sample --output ./out
 
 ## Agent Prompt
 
-Build `opikprobe` as a renamed, local-first OSS idea inspired by `test-opik-mcp`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
+Build `crawlforge` as a renamed, local-first OSS idea inspired by `crawlkit`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.

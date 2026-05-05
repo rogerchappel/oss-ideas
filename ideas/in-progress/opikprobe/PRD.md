@@ -1,6 +1,6 @@
-# notionstash
+# opikprobe
 
-Status: backlog
+Status: in-progress
 Decision: backlog
 
 ## Scorecard
@@ -21,7 +21,7 @@ Scored by: Neo
 
 ## Pitch
 
-A local-first Notion export crawler that normalises pages into SQLite plus agent-ready Markdown bundles.
+A tiny MCP observability probe that tests tracing/evaluation integrations with deterministic fixture calls.
 
 ## Why It Matters
 
@@ -35,7 +35,7 @@ Can this be explained clearly in one sentence to local-first or agentic-tooling 
 
 ### Competitors / Adjacent Tools
 
-- `notcrawl` — source inspiration: https://github.com/vincentkoc/notcrawl (Go, stars/forks signal: 75).
+- `test-opik-mcp` — source inspiration: https://github.com/vincentkoc/test-opik-mcp (TypeScript, stars/forks signal: not listed).
 
 ### Star / Demand Signal
 
@@ -51,10 +51,10 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 
 ## V1 Scope
 
-- Import Notion export fixtures
-- Normalize pages, blocks, links, and attachments
-- Write SQLite index and Markdown tree
-- Generate source-linked crawl summary
+- Mock MCP tool calls
+- Emit trace/eval fixture events
+- Validate expected telemetry fields
+- Generate integration report
 
 ## Out of Scope
 
@@ -65,8 +65,8 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 ## CLI/API Sketch
 
 ```bash
-notionstash --help
-notionstash inspect ./fixtures/sample --output ./out
+opikprobe --help
+opikprobe inspect ./fixtures/sample --output ./out
 ```
 
 ## Verification
@@ -78,4 +78,4 @@ notionstash inspect ./fixtures/sample --output ./out
 
 ## Agent Prompt
 
-Build `notionstash` as a renamed, local-first OSS idea inspired by `notcrawl`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
+Build `opikprobe` as a renamed, local-first OSS idea inspired by `test-opik-mcp`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
