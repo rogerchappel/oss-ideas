@@ -1,6 +1,6 @@
 # repoport
 
-Status: ready
+Status: in-progress
 
 ## Scorecard
 

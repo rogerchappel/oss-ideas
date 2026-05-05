@@ -1,7 +1,7 @@
-# wecombridge
+# plugtestkit
 
-Status: backlog
-Decision: backlog
+Status: in-progress
+Decision: in-progress
 
 ## Scorecard
 
@@ -21,7 +21,7 @@ Scored by: Neo
 
 ## Pitch
 
-An OpenClaw WeCom channel adapter starter with streaming reply fixtures, group policy checks, and integration smoke tests.
+A WordPress plugin test harness generator with PHPUnit, PHPCS, and CI templates for maintainers.
 
 ## Why It Matters
 
@@ -35,7 +35,7 @@ Can this be explained clearly in one sentence to local-first or agentic-tooling 
 
 ### Competitors / Adjacent Tools
 
-- `openclaw-plugin-wecom fork` — source inspiration: https://github.com/vincentkoc/openclaw-plugin-wecom (JavaScript, stars/forks signal: 1).
+- `wordpress-test-template fork` — source inspiration: https://github.com/vincentkoc/wordpress-test-template (Ruby/PHP, stars/forks signal: 3).
 
 ### Star / Demand Signal
 
@@ -51,10 +51,10 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 
 ## V1 Scope
 
-- WeCom payload fixtures
-- Streaming response adapter sketch
-- Group allowlist/command policy checks
-- Local replay smoke tests
+- Generate plugin test scaffold
+- Validate PHP/WordPress version matrix
+- Emit CI workflow template
+- Example fixture plugin tests
 
 ## Out of Scope
 
@@ -65,8 +65,8 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 ## CLI/API Sketch
 
 ```bash
-wecombridge --help
-wecombridge inspect ./fixtures/sample --output ./out
+plugtestkit --help
+plugtestkit inspect ./fixtures/sample --output ./out
 ```
 
 ## Verification
@@ -78,4 +78,4 @@ wecombridge inspect ./fixtures/sample --output ./out
 
 ## Agent Prompt
 
-Build `wecombridge` as a renamed, local-first OSS idea inspired by `openclaw-plugin-wecom fork`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
+Build `plugtestkit` as a renamed, local-first OSS idea inspired by `wordpress-test-template fork`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.

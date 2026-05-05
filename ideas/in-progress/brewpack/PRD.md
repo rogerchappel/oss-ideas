@@ -1,7 +1,7 @@
-# plainforge
+# brewpack
 
-Status: backlog
-Decision: backlog
+Status: in-progress
+Decision: in-progress
 
 ## Scorecard
 
@@ -21,7 +21,7 @@ Scored by: Neo
 
 ## Pitch
 
-A fixture-driven HTML-to-plain-text conversion testbed for comparing extraction quality across libraries.
+A reusable Homebrew tap starter kit for small OSS tool portfolios, with formula templates, CI checks, and install docs.
 
 ## Why It Matters
 
@@ -35,7 +35,7 @@ Can this be explained clearly in one sentence to local-first or agentic-tooling 
 
 ### Competitors / Adjacent Tools
 
-- `html2text fork` — source inspiration: https://github.com/vincentkoc/html2text (PHP, stars/forks signal: 1).
+- `homebrew-tap` — source inspiration: https://github.com/vincentkoc/homebrew-tap (Ruby, stars/forks signal: not listed).
 
 ### Star / Demand Signal
 
@@ -51,10 +51,10 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 
 ## V1 Scope
 
-- Run conversion fixtures
-- Compare readability/output diffs
-- Record edge cases and expected text
-- Export benchmark report
+- Generate tap repo structure
+- Create formula/cask templates from package metadata
+- Validate install block examples
+- Keep publish actions explicit and dry-run first
 
 ## Out of Scope
 
@@ -65,8 +65,8 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 ## CLI/API Sketch
 
 ```bash
-plainforge --help
-plainforge inspect ./fixtures/sample --output ./out
+brewpack --help
+brewpack inspect ./fixtures/sample --output ./out
 ```
 
 ## Verification
@@ -78,4 +78,4 @@ plainforge inspect ./fixtures/sample --output ./out
 
 ## Agent Prompt
 
-Build `plainforge` as a renamed, local-first OSS idea inspired by `html2text fork`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
+Build `brewpack` as a renamed, local-first OSS idea inspired by `homebrew-tap`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
