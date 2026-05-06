@@ -1,6 +1,6 @@
-# termagent
+# colbertcache
 
-Status: backlog
+Status: in-progress
 Decision: backlog
 
 ## Scorecard
@@ -21,7 +21,7 @@ Scored by: Neo
 
 ## Pitch
 
-A lightweight terminal-agent harness focused on reproducible local tasks, transcript export, and safe command review.
+A local fixture mirror manager for retrieval demos, keeping embedding/search demo datasets documented and reproducible.
 
 ## Why It Matters
 
@@ -35,7 +35,7 @@ Can this be explained clearly in one sentence to local-first or agentic-tooling 
 
 ### Competitors / Adjacent Tools
 
-- `codex fork` — source inspiration: https://github.com/vincentkoc/codex (Rust, stars/forks signal: 1).
+- `Colbertv2-Wiki17-Abstracts-Image` — source inspiration: https://github.com/vincentkoc/Colbertv2-Wiki17-Abstracts-Image (Python, stars/forks signal: not listed).
 
 ### Star / Demand Signal
 
@@ -51,10 +51,10 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 
 ## V1 Scope
 
-- Task session runner abstraction
-- Command approval transcript format
-- Local workspace safety checks
-- Export proof bundle for reviews
+- Describe dataset mirrors
+- Verify checksums and file inventory
+- Generate demo retrieval config
+- Document licensing/provenance
 
 ## Out of Scope
 
@@ -65,8 +65,8 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 ## CLI/API Sketch
 
 ```bash
-termagent --help
-termagent inspect ./fixtures/sample --output ./out
+colbertcache --help
+colbertcache inspect ./fixtures/sample --output ./out
 ```
 
 ## Verification
@@ -78,4 +78,4 @@ termagent inspect ./fixtures/sample --output ./out
 
 ## Agent Prompt
 
-Build `termagent` as a renamed, local-first OSS idea inspired by `codex fork`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
+Build `colbertcache` as a renamed, local-first OSS idea inspired by `Colbertv2-Wiki17-Abstracts-Image`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.

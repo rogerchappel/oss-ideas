@@ -1,6 +1,6 @@
-# colbertcache
+# loanagent-lab
 
-Status: backlog
+Status: in-progress
 Decision: backlog
 
 ## Scorecard
@@ -21,7 +21,7 @@ Scored by: Neo
 
 ## Pitch
 
-A local fixture mirror manager for retrieval demos, keeping embedding/search demo datasets documented and reproducible.
+A synthetic loan-application agent lab for testing decision traces, compliance explanations, and review handoffs.
 
 ## Why It Matters
 
@@ -35,7 +35,7 @@ Can this be explained clearly in one sentence to local-first or agentic-tooling 
 
 ### Competitors / Adjacent Tools
 
-- `Colbertv2-Wiki17-Abstracts-Image` — source inspiration: https://github.com/vincentkoc/Colbertv2-Wiki17-Abstracts-Image (Python, stars/forks signal: not listed).
+- `oxf-loanapplication_agent-grpfull4` — source inspiration: https://github.com/vincentkoc/oxf-loanapplication_agent-grpfull4 (Jupyter Notebook, stars/forks signal: not listed).
 
 ### Star / Demand Signal
 
@@ -51,10 +51,10 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 
 ## V1 Scope
 
-- Describe dataset mirrors
-- Verify checksums and file inventory
-- Generate demo retrieval config
-- Document licensing/provenance
+- Synthetic loan application fixtures
+- Agent decision trace schema
+- Reviewer checklist output
+- Bias/compliance caveats
 
 ## Out of Scope
 
@@ -65,8 +65,8 @@ Likely buildable as a deterministic CLI/library/demo if scoped to fixtures, loca
 ## CLI/API Sketch
 
 ```bash
-colbertcache --help
-colbertcache inspect ./fixtures/sample --output ./out
+loanagent-lab --help
+loanagent-lab inspect ./fixtures/sample --output ./out
 ```
 
 ## Verification
@@ -78,4 +78,4 @@ colbertcache inspect ./fixtures/sample --output ./out
 
 ## Agent Prompt
 
-Build `colbertcache` as a renamed, local-first OSS idea inspired by `Colbertv2-Wiki17-Abstracts-Image`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
+Build `loanagent-lab` as a renamed, local-first OSS idea inspired by `oxf-loanapplication_agent-grpfull4`. Preserve attribution, avoid direct copying, and focus V1 on deterministic fixtures, clear safety boundaries, and practical agent/developer workflow value.
