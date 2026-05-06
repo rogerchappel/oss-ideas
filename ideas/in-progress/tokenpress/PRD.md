@@ -1,7 +1,7 @@
 # tokenpress
 
 Status: in-progress
-Decision: backlog
+Decision: in-progress
 
 ## Scorecard
 

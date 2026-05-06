@@ -32,7 +32,7 @@ RepoBar validates repo-status-in-menubar demand. Roger’s 65-to-200 repo target
 
 Source / adjacent research: Inspired by steipete/RepoBar, GitHub repo menu bar app with 1,232 stars / 70 forks checked 2026-04-29.
 
-Decision: build now
+Decision: in-progress
 
 ## V1 Scope
 
