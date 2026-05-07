@@ -23,6 +23,9 @@ coverage/
 .cache/
 .turbo/
 
+# Local factory worktrees
+oss-ideas-worktrees/
+
 # Logs
 *.log
 npm-debug.log*

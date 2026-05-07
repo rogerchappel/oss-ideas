@@ -173,6 +173,7 @@ placeholder_hits="$(grep -RInE '\{\{[A-Z0-9_]+\}\}' \
   --exclude-dir=node_modules \
   --exclude-dir=dist \
   --exclude-dir=build \
+  --exclude-dir=oss-ideas-worktrees \
   . || true)"
 
 unexpected_hits=""
