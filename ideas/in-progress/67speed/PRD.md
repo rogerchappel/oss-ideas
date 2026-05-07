@@ -1,7 +1,7 @@
 # PRD: 67speed
 
-Status: ready
-Decision: greenlit for next OSS cron
+Status: in-progress
+Decision: selected for OSS factory build on 2026-05-07
 
 ## Scorecard
 

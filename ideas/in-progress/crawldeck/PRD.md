@@ -1,7 +1,7 @@
 # crawldeck
 
-Status: backlog
-Decision: backlog
+Status: in-progress
+Decision: selected for OSS factory build on 2026-05-07
 
 ## Scorecard
 
