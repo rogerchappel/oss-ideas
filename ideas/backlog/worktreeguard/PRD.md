@@ -1,6 +1,6 @@
 # WorktreeGuard PRD
 
-Status: in-progress
+Status: backlog
 
 ## Summary
 
