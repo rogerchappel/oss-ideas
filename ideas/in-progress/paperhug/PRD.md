@@ -1,7 +1,7 @@
 # PRD: paperhug
 
-Status: ready
-Decision: greenlit for next OSS factory generation
+Status: in-progress
+Decision: in OSS factory generation
 
 ## Scorecard
 
