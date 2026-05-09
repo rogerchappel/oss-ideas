@@ -1,7 +1,7 @@
 # opikprobe
 
 Status: in-progress
-Decision: backlog
+Decision: selected for OSS factory build on 2026-05-10
 
 ## Scorecard
 
