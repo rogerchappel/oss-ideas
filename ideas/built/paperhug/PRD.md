@@ -1,7 +1,7 @@
 # PRD: paperhug
 
-Status: in-progress
-Decision: in OSS factory generation
+Status: built
+Decision: built and released as rogerchappel/paperhug v0.1.0
 
 ## Scorecard
 
