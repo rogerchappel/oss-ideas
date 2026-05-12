@@ -8,7 +8,7 @@ This repo turns rough OSS ideas into scoped PRDs that agents can build from.
 
 ## Purpose
 
-Roger is running a 70-day OSS sprint. The goal is not just to create many repos, but to discover a repeatable workflow for high-quality, high-throughput open-source shipping with AI agents.
+Roger is running a 60-day OSS sprint. The goal is not just to create many repos, but to discover a repeatable workflow for high-quality, high-throughput open-source shipping with AI agents.
 
 This repository is the source of truth for:
 
