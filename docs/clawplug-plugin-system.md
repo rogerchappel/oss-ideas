@@ -1,23 +1,23 @@
-# PRD: carapace-plugin-system
+# PRD: clawplug — OpenClaw Plugin SDK
 
 ## Product Name
 
-**carapace-plugin-system**
+**clawplug**
 
 ## Tagline
 
-A plugin SDK and starter template for building typed OpenClaw plugins with zero boilerplate.
+The official plugin SDK for building typed OpenClaw plugins with zero boilerplate.
 
 ## One-Line Pitch
 
-`carapace-plugin-system` lets developers define plugin tools and config in a single `src/plugin.ts` file and automatically get a fully typed OpenClaw adapter, a standalone CLI, and a plugin manifest — no registration boilerplate, no result-wrapping, no manifest maintenance.
+`clawplug` lets developers define plugin tools, config, and lifecycle hooks in a single file and automatically get a fully typed OpenClaw adapter, a standalone CLI, a plugin manifest, and a live dev server — no registration boilerplate, no result-wrapping, no manifest maintenance.
 
 ## 1. Objective
 
 Create a two-part OSS ecosystem for extending OpenClaw with third-party plugins:
 
-- **carapace-plugin-sdk** — the core SDK: `definePlugin()` macro, TypeBox-driven config schemas, result-format wrapping, CLI generator, shared build configs, and reusable GitHub Actions workflows.
-- **carapace-plugin-template** — a GitHub template repository that scaffolds a complete plugin project (CI, tests, build) in one click.
+- **clawplug** — the core SDK: `definePlugin()` macro, TypeBox-driven config schemas with named sections, result-format wrapping, CLI generator, live dev server, plugin lifecycle hooks, publication validator, and reusable GitHub Actions workflows.
+- **clawplug-template** — a GitHub template repository that scaffolds a complete plugin project (CI, tests, build) in one click.
 
 Together, they make adding a custom toolset to OpenClaw as easy as writing a single TypeScript file.
 
@@ -25,11 +25,12 @@ Together, they make adding a custom toolset to OpenClaw as easy as writing a sin
 
 > Writing an OpenClaw plugin should feel like writing Express route handlers — define the shape, return the result, everything else is infrastructure.
 
-The SDK eliminates the three biggest friction points in plugin development:
+The SDK eliminates the four biggest friction points in plugin development:
 
 1. **Boilerplate** — no adapter setup, no manifest JSON to maintain, no CLI argument parsing.
 2. **Type safety** — config schema drives TypeScript inference for both tool parameters and config fields.
 3. **Standalone utility** — every plugin is automatically a testable, standalone CLI usable outside OpenClaw.
+4. **Test-first developer experience** — testing is a first-class concern, not an afterthought. V1 ships with `clawplug/test` helpers that let you invoke tools with mock config in a few lines.
 
 ## 3. Target Users
 
@@ -47,26 +48,23 @@ The SDK eliminates the three biggest friction points in plugin development:
 
 ### Reference Inspiration
 
-- <https://github.com/JeffSteinbok/carapace-plugin-sdk> — the SDK implementation
-- <https://github.com/JeffSteinbok/carapace-plugin-template> — the template repository
-- <https://github.com/JeffSteinbok/carapace-stock-quotes> — a real plugin example with Yahoo Finance + Finnhub
+- <https://github.com/JeffSteinbok/carapace-plugin-sdk> — an existing community plugin SDK. Clawplug shares the core philosophy (define tools, get everything else) but differentiates in developer experience, lifecycle hooks, and test-first design.
 
 ## 4. Repository Types
 
 Two repositories, each with a distinct role:
 
-### carapace-plugin-sdk (npm package + library)
+### clawplug (npm package + library)
 
 TypeScript/Node library published to npm. Consumed as a dev and runtime dependency by plugin projects.
 
-### carapace-plugin-template (GitHub template repository)
+### clawplug-template (GitHub template repository)
 
 A minimal `Use this template` repository. Contains a fully working plugin project with CI, tests, and build — all configured to depend on the SDK.
 
 Suggested GitHub topics:
 
 - `openclaw-plugins`
-- `carapace-sdk`
 - `plugin-sdk`
 - `typebox`
 - `cli-generator`
@@ -75,24 +73,29 @@ Suggested GitHub topics:
 
 ## 5. Current V1 Surface Area
 
-V1 covers the core SDK functionality and its companion template.
+V1 covers the core SDK functionality and its companion template, with test-first and dev mode baked in from day one.
 
-### carapace-plugin-sdk — Core Features
+### clawplug — Core Features
 
 | Feature | What it does |
 |---------|-------------|
 | `definePlugin()` | TypeBox-driven plugin definition with config schema and tool list. Produces a `createEntry` factory. |
+| Config sections | Instead of one flat schema, config fields can be organized into named sections (`auth`, `connection`, etc.) for richer OpenClaw settings UI rendering. |
 | Type inference | Tool parameters and config fields are fully inferred from the TypeBox schema — no casts, no `any`. |
 | Result wrapping | `execute()` returns a plain object. SDK wraps it in the OpenClaw result format automatically. |
-| Manifest generation (`carapace-generate-cli`) | Reads compiled plugin, extracts tool names, config schema, and generates `openclaw.plugin.json` + the standalone CLI. |
+| Plugin lifecycle hooks | `onLoad`, `onToolCall`, `onError` hooks let plugins run initialization code, intercept tool invocations, and handle errors gracefully — middleware-style. |
+| Manifest generation (`clawplug-generate-cli`) | Reads compiled plugin, extracts tool names, config schema, hooks, and generates `openclaw.plugin.json` + the standalone CLI. |
 | Standalone CLI | Each tool becomes a subcommand. Supports `--json` flag, env var config mapping (`<PLUGIN_ID>_<FIELD>`). |
+| `clawplug dev` (watch mode) | Live dev server that regenerates the CLI and manifest on source file changes during development — no manual rebuild step. |
+| `clawplug validate` | Publication readiness checker: verifies exports, manifest, types, build output, and catches common mistakes before running `npm publish`. |
+| `@clawplug/test` (testing utilities) | Helpers that let you call plugin tools with mock config, assert on results, and test hooks — no mock gateway needed. Ships in V1. |
 | Shared configs | `tsconfig.base.json`, `tsup` preset — one-line extends and three-line configs. |
 | Reusable GitHub Actions | `plugin-ci.yml` and `plugin-release.yml` — no workflow logic to copy. |
 
-### carapace-plugin-template — What it scaffolds
+### clawplug-template — What it scaffolds
 
 - `src/plugin.ts` — single entry point with example greet tool
-- `tests/plugin.test.ts` — test file calling `createEntry()` directly via vitest
+- `tests/plugin.test.ts` — test file using `@clawplug/test` helpers via vitest
 - `package.json` — build scripts, bin entry, SDK dependency
 - `tsconfig.json` — one-line SDK config extension
 - `tsup.config.ts` — three-line SDK config
@@ -113,7 +116,7 @@ openclaw.plugin.json
 ### Developer experience — one file
 
 ```ts
-import { definePlugin } from "carapace-plugin-sdk";
+import { definePlugin } from "clawplug";
 import { Type } from "@sinclair/typebox";
 
 export const createEntry = definePlugin({
@@ -121,9 +124,27 @@ export const createEntry = definePlugin({
   name: "My Plugin",
   description: "Does something useful.",
 
-  configSchema: Type.Object({
-    apiKey: Type.Optional(Type.String({ description: "API key for the service." })),
-  }),
+  // Config sections for richer settings UI
+  configSchema: {
+    auth: Type.Object({
+      apiKey: Type.String({ description: "API key for the service." }),
+      apiSecret: Type.Optional(Type.String({ description: "Optional API secret." })),
+    }),
+    connection: Type.Object({
+      timeout: Type.Optional(Type.Number({ description: "Request timeout in ms." })),
+    }),
+  },
+
+  // Lifecycle hooks
+  hooks: {
+    onLoad: async (config) => {
+      // validate connectivity, warm up caches, etc.
+    },
+    onError: async (toolName, error) => {
+      // centralized error handling
+    },
+  },
+
 
   tools: (tool) => [
     tool({
@@ -133,7 +154,7 @@ export const createEntry = definePlugin({
         input: Type.String({ description: "Input value." }),
       }),
       execute: async ({ input }, config) => {
-        return { result: input, usingKey: !!config.apiKey };
+        return { result: input, usingKey: !!config.auth.apiKey };
       },
     }),
   ],
@@ -142,21 +163,62 @@ export const createEntry = definePlugin({
 
 That's the entire plugin. Build and you get adapter, CLI, and manifest.
 
+### Test-first with @clawplug/test
+
+```ts
+import { testPlugin } from "@clawplug/test";
+import { createEntry } from "../src/plugin";
+
+test("do_thing returns input", async () => {
+  const { tools } = testPlugin(createEntry, {
+    auth: { apiKey: "test-key" },
+    connection: { timeout: 5000 },
+  });
+
+  const result = await tools.do_thing({ input: "hello" });
+  expect(result.content[0].text).toMatch(/hello/);
+});
+```
+
+### Live dev mode
+
+```bash
+clawplug dev
+# Watches src/ and regenerates adapter + CLI + manifest on changes
+# Open a second terminal and run: my-plugin do-thing "test"
+```
+
+### Validate before publishing
+
+```bash
+clawplug validate
+# ✓ Manifest generated
+# ✓ All exports present
+# ✓ TypeScript strict mode passes
+# ✓ No stray generated files in repo
+# ✓ Plugin is ready to publish
+```
+
 ## 6. V1 Requirements
 
 V1 must:
 
-- provide `definePlugin()` that accepts id, name, description, configSchema, and tools
+- provide `definePlugin()` that accepts id, name, description, configSchema, hooks, and tools
 - use TypeBox for all schema definitions (config + tool parameters)
+- support named config sections that flatten to a single config object at runtime
 - fully infer execute() parameter and return types from schemas
 - automatically wrap execute() return values in OpenClaw result format
+- provide plugin lifecycle hooks: `onLoad`, `onToolCall`, `onError`
 - generate `openclaw.plugin.json` manifest from the plugin definition
 - generate a standalone CLI where each tool is a subcommand
 - map config fields to env vars using `<PLUGIN_ID>_<FIELD>` convention
 - support `--json` output flag on CLI subcommands
+- ship `clawplug dev` watch mode for zero-rebuild local development
+- ship `clawplug validate` publication readiness checker
+- ship `@clawplug/test` testing helpers for mock tool invocation
 - ship shared `tsconfig.base.json` and `tsup` config preset
 - provide reusable GitHub Actions workflows for CI and release
-- include a template repository with working example, CI, tests, and build
+- include a template repository with working example, CI, tests, and build using `@clawplug/test`
 - example plugin in template must pass `npm test` and `npm run build`
 - use MIT license for both repos
 
@@ -174,20 +236,25 @@ V1 must not:
 
 The SDK should include `ARCHITECTURE.md` explaining:
 
-- The type machinery behind `definePlugin`
-- How `carapace-generate-cli` inspects the compiled plugin to extract metadata
+- The type machinery behind `definePlugin()`
+- Config section flattening: named groups at declaration time, single object at runtime
+- Plugin lifecycle hook execution order and error propagation
+- How `clawplug-generate-cli` inspects the compiled plugin to extract metadata
 - The CLI runtime and subcommand dispatch
 - The adapter pattern for OpenClaw integration
 - How result wrapping transforms plain objects into OpenClaw protocol format
+- How `@clawplug/test` provides mock-gateway-free testing
+- The `clawplug dev` watch mode file dependency graph
 
 ### Real plugin examples
 
-At least one full integration repo (like `carapace-stock-quotes`) demonstrating:
+At least one full integration repo demonstrating:
 
 - Multiple data sources
 - API key config
-- Error handling strategies
-- Testing patterns for external dependencies
+- Error handling strategies with hooks
+- Testing patterns using `@clawplug/test`
+- External dependency mocking
 
 ## 8. Future Enhancements
 
@@ -204,36 +271,21 @@ The generated `openclaw.plugin.json` could include metadata for discovery:
 
 The configSchema TypeBox schema could drive an OpenClaw settings UI:
 
-- Form fields rendered from JSON Schema
+- Tabbed form fields rendered from config sections
 - OAuth flow support for services requiring auth
 - Connection test button in settings panel
-
-### Plugin Testing Utilities
-
-SDK could ship a testing helper:
-
-```ts
-import { testPlugin } from "carapace-plugin-sdk/testing";
-
-const { tools } = testPlugin(createEntry, { apiKey: "test-key" });
-const result = await tools.do_thing({ input: "hello" });
-```
-
-### Watch Mode for Local Development
-
-`carapace-generate-cli --watch` could regenerate the CLI and manifest on source changes during development, so plugin authors don't need to rerun build manually for every change.
-
-### Plugin Versioning and Dependency Management
-
-Support for plugins declaring dependencies on other plugins or specific OpenClaw versions, loaded via the SDK's adapter.
 
 ### Template Variants
 
 Additional template flavours beyond the basic one:
 
-- `plugin-weather-template` — shows external API integration
-- `plugin-database-template` — shows persistent storage patterns
-- `plugin-webhook-template` — shows webhook/callback patterns
+- `clawplug-template-api` — shows external API integration
+- `clawplug-template-database` — shows persistent storage patterns
+- `clawplug-template-webhook` — shows webhook/callback patterns
+
+### Plugin Versioning and Dependency Management
+
+Support for plugins declaring dependencies on other plugins or specific OpenClaw versions, loaded via the SDK's adapter.
 
 ### Plugin Analytics (Opt-in)
 
@@ -248,10 +300,14 @@ Optional SDK integration for collecting anonymous usage data:
 V1 is acceptable when:
 
 - `definePlugin()` works with zero-config setup
-- TypeScript inference flows correctly from TypeBox schemas through to execute() parameters
+- TypeScript inference flows correctly from TypeBox schemas through to execute() parameters and config sections
 - `npm run build` generates adapter, CLI, and manifest without errors
 - CLI subcommands return correct results in both human-readable and `--json` modes
-- Config env var mapping works end-to-end
+- Config env var mapping works end-to-end with section-prefixed variables
+- Plugin lifecycle hooks fire in the correct order with proper error handling
+- `clawplug dev` regenerates artifacts on source file changes
+- `clawplug validate` correctly identifies missing exports, manifest issues, and configuration errors
+- `@clawplug/test` helpers allow testing tools with mock config without running an OpenClaw gateway
 - Reusable GitHub Actions workflows succeed in a plugin repo
 - Template repository can be created via "Use this template", builds, and passes tests
 - `ARCHITECTURE.md` explains the internals for contributors
@@ -266,6 +322,7 @@ V1 is acceptable when:
 - `npm pack` produces a valid tarball for the SDK
 - TypeScript strict mode passes with no errors
 - Generated CLI returns correct help output
+- `clawplug validate` passes on template
 - `git diff --check` passes
 - Markdown renders cleanly in GitHub
 
@@ -273,10 +330,14 @@ V1 is acceptable when:
 
 ### V1 — Plugin SDK and Template
 
-- `definePlugin()` with TypeBox schemas
+- `definePlugin()` with TypeBox schemas and config sections
+- Plugin lifecycle hooks
 - Automatic result wrapping
 - CLI generation
 - Manifest generation
+- `clawplug dev` watch mode
+- `clawplug validate` publication checker
+- `@clawplug/test` testing utilities
 - Shared build configs
 - Reusable GitHub Actions
 - Template repository
@@ -285,16 +346,14 @@ V1 is acceptable when:
 
 ### V2 — Developer Experience
 
-- Plugin testing utilities
-- Watch mode for local dev
-- Template variants for common patterns
+- Template variants for common patterns (API, database, webhook)
 - Plugin analytics (opt-in)
-- Error message improvements and debug mode
+- More granular error messages and debug mode
+- Plugin configuration UI integration with OpenClaw settings panel
 
 ### V3 — Marketplace and Enterprise
 
 - Plugin discovery metadata
-- Settings UI generation from configSchema
 - OAuth integration support
 - Plugin dependency declarations
 - Enterprise plugin signing/verification
@@ -302,6 +361,6 @@ V1 is acceptable when:
 
 ## 12. Final Product Promise
 
-`carapace-plugin-system` makes OpenClaw extensibility feel trivial.
+`clawplug` makes OpenClaw extensibility feel trivial.
 
 Define your tools, build once, get an adapter, a CLI, and a manifest — all typed, all tested, all publishable. Plugin development should be about writing business logic, not wiring frameworks together.
