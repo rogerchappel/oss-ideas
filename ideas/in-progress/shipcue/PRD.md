@@ -1,6 +1,6 @@
 # PRD: shipcue
 
-Status: backlog
+Status: in-progress
 Decision: build now
 
 ## Scorecard
