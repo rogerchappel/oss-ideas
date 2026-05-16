@@ -1,6 +1,7 @@
 # LockDrift PRD
 
 Status: in-progress
+Factory run: 2026-05-17 AM
 
 ## One-liner
 `lockdrift` audits package lockfiles for duplicate versions, registry surprises, git deps, and stale package metadata before dependency drift bites. 🔒

@@ -2,6 +2,7 @@
 
 Status: in-progress
 Decision: build now
+Factory run: 2026-05-17 AM
 
 ## Pitch
 

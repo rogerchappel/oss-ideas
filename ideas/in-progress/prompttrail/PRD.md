@@ -1,6 +1,7 @@
 # PromptTrail PRD
 
 Status: in-progress
+Factory run: 2026-05-17 AM
 
 ## Summary
 
