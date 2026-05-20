@@ -1,72 +1,50 @@
-# PatchScope PRD
+# PRD: patchscope
 
 Status: in-progress
 
 ## Summary
 
-PatchScope is a local-first TypeScript CLI that inspects git patches and working-tree diffs for review risk: touched subsystems, likely tests, secret-looking additions, large generated-file changes, and missing documentation updates. It is built for developers and agentic coding loops that need deterministic pre-review evidence without uploading code. Think of it as a tiny review radar for patches before they hit GitHub.
+PatchScope is a local-first TypeScript CLI that analyzes git patches and PR diffs for security risks, dependency changes, API surface modifications, and complexity regressions. It reads unified diffs, classifies changes by risk category, and produces actionable reports for code review — especially agentic review loops that need deterministic risk scoring.
 
-## Source attribution
+Built for developers and teams who want fast, automated second-pass review on any diff without needing the full repo context.
 
-Created during the twice-daily OSS factory run on 2026-05-08. Web search was attempted for current developer-tool pain points, but the configured search provider returned an authentication/plan error, so this PRD is based on local OSS factory context, recurring agent workflow needs, and general public patterns around reproducible CLI tooling.
+## Inspiration
 
-## Target users
+- `reviewbundle` exists but focuses on review bundling; patchscope is about patch *analysis*.
+- `depgraph` covers dependency graphs; patchscope covers dependency *changes*.
+- Code review is the highest-leverage developer workflow; automated diff analysis is underserved.
 
-- Agent teams preparing patches for human review.
-- OSS maintainers who want small, scriptable quality gates.
-- Developers who need a quick local risk summary before committing or pushing.
+Reframed: patchscope is **eslint for git diffs** — catch risky changes before they land, regardless of review platform.
 
-## Problem
+## Scorecard
 
-Patch review often starts with a noisy raw diff. Agents can change many files quickly, and humans need a compact, deterministic map of what changed, what looks risky, and what tests probably matter. Existing hosted review tools are useful, but a local preflight should catch obvious issues before source leaves the machine.
+Total: 83/100
+Band: build now
 
-## Goals
+| Criterion | Points | Notes |
+|---|---:|---|
+| Problem pain | 16/20 | Code review misses security issues and subtle breaking changes; reviewers are overloaded. |
+| Demand signal | 16/20 | diff-based tools consistently popular; existing tools are platform-specific or cloud-based. |
+| V1 buildability | 17/20 | Unified diff parsing is well-understood; rule-based analysis is buildable fast. |
+| Differentiation | 14/15 | Local-first, platform-agnostic, focused on risk classification not style linting. |
+| Agentic workflow leverage | 13/15 | Perfect fit for agent review loops — deterministic diff scoring without API calls. |
+| Distribution potential | 7/10 | Name is clear; audience is reviewers and CI systems. |
 
-- Analyze `git diff`, patch files, or stdin entirely offline.
-- Produce stable Markdown and JSON review summaries.
-- Redact obvious secrets and flag suspicious additions.
-- Suggest likely test/smoke commands from changed paths and package scripts.
-- Exit non-zero for configurable risk thresholds.
-- Include fixture-backed tests and copy-paste CLI examples.
+## MVP
+
+- Parse unified diff input (stdin, file, or git diff output)
+- Classify changes: security-sensitive files, dependency updates, public API changes, large refactorings
+- Risk scoring per file and overall
+- Detect: secret patterns, chmod +x changes, lockfile-only updates, deleted tests
+- Output: JSON report + human-readable summary with per-file findings
+- CLI: `patchscope check`, `patchscope from-diff`, `patchscope from-git`, `patchscope rules`, `patchscope report`
+
+## Tech stack
+
+TypeScript, Node.js CLI, no external dependencies for core diff parsing
 
 ## Non-goals
 
-- LLM code review.
-- Hosted dashboards or accounts.
-- Replacing full static analysis, SAST, or CI.
-- Automatically modifying source files.
-
-## V1 CLI
-
-```bash
-patchscope scan --staged --out patchscope.md
-patchscope scan examples/feature.patch --json --fail-on secret,huge-generated
-patchscope suggest-tests --diff examples/feature.patch
-```
-
-## Functional requirements
-
-1. Parse unified diff input from files, stdin, `--staged`, or current working tree.
-2. Group touched files by extension, directory, and likely subsystem.
-3. Detect added secret-like values with safe redacted output.
-4. Detect generated/minified/lockfile-heavy patches and large binary markers.
-5. Suggest tests based on package scripts, changed paths, and common conventions.
-6. Render deterministic Markdown and JSON.
-7. Support `--fail-on` risk classes for local CI gates.
-8. Avoid telemetry, external network calls, and hidden writes.
-
-## Acceptance criteria
-
-- `npm test`, `npm run check`, `npm run build`, and `npm run smoke` pass.
-- `bash scripts/validate.sh` passes when present.
-- At least one real CLI smoke uses a checked-in patch fixture.
-- README explains why the tool exists, quick start, examples, safety model, and limitations.
-- GitHub repository is public under `rogerchappel/patchscope` with useful description and topics.
-
-## Suggested implementation waves
-
-1. Scaffold TypeScript CLI with StackForge and planning docs.
-2. Add unified diff parser and risk model.
-3. Add renderers for Markdown and JSON.
-4. Add CLI commands, fixtures, tests, and smoke script.
-5. Polish README, metadata, topics, branch protection, and release-readiness notes.
+- No integration with specific PR platforms (GitHub, GitLab, etc.)
+- No code execution or runtime analysis
+- No style/lint checking (use existing linters for that)
