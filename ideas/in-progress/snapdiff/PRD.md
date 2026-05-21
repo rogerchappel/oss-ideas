@@ -1,6 +1,6 @@
 # SnapDiff PRD
 
-Status: backlog
+Status: in-progress
 
 ## Summary
 

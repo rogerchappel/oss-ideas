@@ -1,6 +1,6 @@
 # PRD: ossrank
 
-Status: ready
+Status: in-progress
 Decision: greenlit for next OSS cron
 
 ## Scorecard
