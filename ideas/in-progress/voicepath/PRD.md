@@ -1,6 +1,7 @@
 # voicepath
 
 Status: in-progress
+Factory selection: 2026-05-25 AM OSS factory run
 Decision: build now
 
 ## Scorecard

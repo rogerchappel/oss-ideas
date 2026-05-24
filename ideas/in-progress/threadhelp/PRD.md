@@ -1,6 +1,7 @@
 # ThreadHelp PRD
 
 Status: in-progress
+Factory selection: 2026-05-25 AM OSS factory run
 Owner: Roger Chappel
 Domain: threadhelp.com
 

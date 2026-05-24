@@ -1,6 +1,7 @@
 # CLIFingerprint PRD
 
 Status: in-progress
+Factory selection: 2026-05-25 AM OSS factory run
 
 ## Summary
 
@@ -33,4 +34,3 @@ CLI changes are easy to make accidentally and hard to notice in reviews. Agentic
 ## Source Attribution
 
 Inspired by approval testing, snapshot testing, and command contract docs used in tools like Cobra and Commander projects. Reframed as a standalone local-first CLI contract recorder.
-
