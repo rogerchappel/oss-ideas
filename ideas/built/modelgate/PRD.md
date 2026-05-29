@@ -1,6 +1,6 @@
 # modelgate
 
-Status: in-progress
+Status: built
 Decision: build now
 
 ## Scorecard

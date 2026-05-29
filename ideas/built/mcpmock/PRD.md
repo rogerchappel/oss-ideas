@@ -1,6 +1,6 @@
 # MCPMock PRD
 
-Status: in-progress
+Status: built
 
 ## One-liner
 
