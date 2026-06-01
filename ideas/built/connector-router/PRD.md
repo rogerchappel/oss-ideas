@@ -1,7 +1,7 @@
 # PRD: connector-router
 
-Status: ready
-Decision: build now
+Status: built
+Decision: ship
 
 ## Scorecard
 

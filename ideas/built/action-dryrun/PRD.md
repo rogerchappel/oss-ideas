@@ -1,7 +1,7 @@
 # PRD: action-dryrun
 
-Status: ready
-Decision: ready
+Status: built
+Decision: ship
 
 ## Scorecard
 

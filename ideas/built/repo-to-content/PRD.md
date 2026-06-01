@@ -1,7 +1,7 @@
 # PRD: repo-to-content
 
-Status: ready
-Decision: build now
+Status: built
+Decision: ship
 
 ## Scorecard
 
