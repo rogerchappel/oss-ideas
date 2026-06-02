@@ -1,6 +1,6 @@
 # PRD: postmaker
 
-Status: ready
+Status: in-progress
 Decision: ready
 
 ## Scorecard

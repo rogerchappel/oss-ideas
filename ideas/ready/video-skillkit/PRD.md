@@ -1,6 +1,6 @@
 # PRD: video-skillkit
 
-Status: ready
+Status: in-progress
 Decision: build now
 
 ## Scorecard
