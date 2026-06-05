@@ -1,6 +1,6 @@
 # PRD: tool-demo-script
 
-Status: ready
+Status: in-progress
 Decision: ready
 
 ## Scorecard
