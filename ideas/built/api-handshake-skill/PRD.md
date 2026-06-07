@@ -1,7 +1,7 @@
 # PRD: api-handshake-skill
 
-Status: ready
-Decision: ready
+Status: built
+Decision: built
 
 ## Scorecard
 

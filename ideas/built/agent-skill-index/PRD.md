@@ -1,7 +1,7 @@
 # PRD: agent-skill-index
 
-Status: ready
-Decision: ready
+Status: built
+Decision: built
 
 ## Scorecard
 
