@@ -1,7 +1,7 @@
 # PRD: repo-review-skill
 
-Status: in-progress
-Decision: ready
+Status: built
+Decision: ship
 
 ## Scorecard
 
