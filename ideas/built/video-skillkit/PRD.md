@@ -1,7 +1,11 @@
 # PRD: video-skillkit
 
-Status: in-progress
-Decision: build now
+Status: built
+Decision: ship
+
+Repository: https://github.com/rogerchappel/video-skillkit
+Release candidate PR: https://github.com/rogerchappel/video-skillkit/pull/4
+Built: 2026-06-10
 
 ## Scorecard
 
@@ -79,3 +83,7 @@ video-skillkit validate video-plan/video.json
 ## Agent Prompt
 
 Build `video-skillkit` as a local-first pre-production CLI for agent-generated product demo videos.
+
+## Factory Result
+
+Shipped as a public local-first CLI and agent skill with repo fact extraction, grounded video manifests, asset validation, release-candidate docs, and protected `main`.

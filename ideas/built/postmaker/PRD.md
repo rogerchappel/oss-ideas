@@ -1,7 +1,11 @@
 # PRD: postmaker
 
-Status: in-progress
-Decision: ready
+Status: built
+Decision: ship
+
+Repository: https://github.com/rogerchappel/postmaker
+Release candidate PR: https://github.com/rogerchappel/postmaker/pull/4
+Built: 2026-06-10
 
 ## Scorecard
 
@@ -54,3 +58,7 @@ postmaker check posts/launch.md --source ./repo
 ## Agent Prompt
 
 Build `postmaker` as a grounded social draft generator with local source inspection and explicit claim status.
+
+## Factory Result
+
+Shipped as a public local-first CLI and agent skill with fixture-backed tests, claim-status generation, evidence checks, release-candidate docs, and protected `main`.
