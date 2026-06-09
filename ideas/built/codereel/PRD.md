@@ -1,6 +1,6 @@
 # PRD: codereel
 
-Status: ready
+Status: built
 Decision: build now
 
 ## Scorecard
@@ -136,3 +136,9 @@ Core outputs:
 ## Agent Prompt
 
 Build `codereel` as a local-first CLI that turns existing repos into verified walkthrough/storyboard packages for demo videos. Focus on truthful repo inspection, claim verification, and renderer-neutral outputs before adding provider-specific video rendering. Treat it as an OSS proof-of-concept for a future product-videogen/ClutchCut repo-to-video workflow, but keep V1 independent and usable without private product APIs.
+
+## Build Outcome
+
+- Repo: https://github.com/rogerchappel/codereel
+- Release-candidate PR: https://github.com/rogerchappel/codereel/pull/1
+- Classification: ship

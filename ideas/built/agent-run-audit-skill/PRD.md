@@ -1,6 +1,6 @@
 # PRD: agent-run-audit-skill
 
-Status: ready
+Status: built
 Decision: build now
 
 ## Scorecard
@@ -61,3 +61,9 @@ agent-run-audit check .audit/audit.json
 ## Agent Prompt
 
 Build `agent-run-audit-skill` as a local-first CLI and reusable skill for auditing agent transcripts. It should produce compact, evidence-oriented reports without executing transcript commands or touching external services.
+
+## Build Outcome
+
+- Repo: https://github.com/rogerchappel/agent-run-audit-skill
+- Release-candidate PR: https://github.com/rogerchappel/agent-run-audit-skill/pull/1
+- Classification: ship
