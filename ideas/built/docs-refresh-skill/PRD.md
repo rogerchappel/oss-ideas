@@ -1,7 +1,7 @@
 # PRD: docs-refresh-skill
 
-Status: ready
-Decision: ready
+Status: built
+Decision: built
 
 ## Scorecard
 
@@ -53,3 +53,9 @@ docs-refresh-skill ./repo --out docs-drift.md
 ## Agent Prompt
 
 Build `docs-refresh-skill` as a local documentation drift detector for OSS maintenance agents.
+
+## Build Result - 2026-06-09
+
+Public repo: https://github.com/rogerchappel/docs-refresh-skill
+Release-candidate PR: https://github.com/rogerchappel/docs-refresh-skill/pull/1
+Classification: ship

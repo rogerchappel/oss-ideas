@@ -1,7 +1,7 @@
 # PRD: crm-adapter-kit
 
-Status: ready
-Decision: build now
+Status: built
+Decision: built
 
 ## Scorecard
 
@@ -55,3 +55,9 @@ crm-adapter-kit plan-task --contact "Ada Lovelace" --follow-up "Send deck"
 ## Agent Prompt
 
 Build `crm-adapter-kit` as a provider-neutral CRM primitive layer for safe agent workflows.
+
+## Build Result - 2026-06-09
+
+Public repo: https://github.com/rogerchappel/crm-adapter-kit
+Release-candidate PR: https://github.com/rogerchappel/crm-adapter-kit/pull/1
+Classification: ship

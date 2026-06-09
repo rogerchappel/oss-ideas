@@ -1,7 +1,7 @@
 # PRD: skill-packager
 
-Status: ready
-Decision: ready
+Status: built
+Decision: built
 
 ## Scorecard
 
@@ -54,3 +54,9 @@ skill-packager check ./my-skill
 ## Agent Prompt
 
 Build `skill-packager` as a local scaffolder and validator for reusable agent skills.
+
+## Build Result - 2026-06-09
+
+Public repo: https://github.com/rogerchappel/skill-packager
+Release-candidate PR: https://github.com/rogerchappel/skill-packager/pull/1
+Classification: ship
