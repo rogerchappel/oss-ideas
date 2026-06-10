@@ -21,7 +21,7 @@ Scored by: OpenClaw agent from Roger direction
 
 ## Pitch
 
-`launchclip` turns an OSS repo into a grounded social promo packet: demo artifacts, a short-form video edit plan, captions, and a dry-run or approved queue payload for Clutch Cut.
+`launchclip` turns an OSS repo into a grounded social promo packet: demo artifacts, a short-form video edit plan, captions, generated media handoff, and a dry-run or approved queue payload for Clutch Cut.
 
 ## Why It Matters
 
@@ -43,7 +43,9 @@ Can this be explained clearly in one sentence? Yes: "Run one command on an OSS r
 - `postmaker` - adjacent grounded social draft generator with explicit claim status.
 - Remotion / Hyperframes-style renderers - good downstream adapters, but should not be hard-coded into the planning layer.
 - Buffer, Hypefury, Typefully, Later, and native platform schedulers - useful scheduling references, but not local-first OSS-agent pipelines.
-- Clutch Cut - target queue system for Roger's content workflow.
+- `repo-to-content` - adjacent evidence-grounded launch content generator from repo facts.
+- Clutch Cut - target queue and publishing system for Roger's content workflow.
+- Product videogen API - target media generation/rendering system for turning approved scene plans into assets.
 
 ### Star / Demand Signal
 
@@ -90,6 +92,11 @@ V1 can be built without external posting permissions:
   - default to `--dry-run`
   - support `--queue clutchcut` only after explicit config/approval
   - write a queue receipt showing destination, assets, captions, and publish status
+- Publish bridge stage:
+  - submit approved video plans to product-videogen only with explicit `--submit`
+  - attach generated media asset IDs or URLs to the Clutch Cut queue payload
+  - support direct Clutch Cut API submission or local import-folder/dropfile workflows
+  - save request/response receipts with secrets redacted
 - Agent skill:
   - clear workflow for agents to run inspect, create artifacts, review, render or dry-run, write captions, and queue
   - approval checkpoints before rendering final media or queueing externally
@@ -125,6 +132,14 @@ launchclip queue .launchclip/my-oss-tool \
   --queue clutchcut \
   --dry-run
 
+launchclip render .launchclip/my-oss-tool \
+  --provider product-videogen \
+  --dry-run
+
+launchclip publish .launchclip/my-oss-tool \
+  --provider clutchcut \
+  --dry-run
+
 launchclip review .launchclip/my-oss-tool
 ```
 
@@ -141,6 +156,7 @@ Example output:
     video.json
     brief.md
     render-plan.json
+    product-videogen.dry-run.json
   captions/
     x.md
     linkedin.md
@@ -148,6 +164,7 @@ Example output:
     bluesky.md
   queue/
     clutchcut.dry-run.json
+    clutchcut.publish.dry-run.json
     receipt.json
   REVIEW.md
 ```
@@ -161,8 +178,10 @@ The CLI should behave like a small pipeline runner with explicit stage receipts:
 3. `brief` - call `video-skillkit` semantics to create a grounded video manifest.
 4. `edit` - emit viral-format edit instructions and optionally call `cutpilot` or a renderer adapter.
 5. `caption` - create platform drafts using only evidence-backed claims.
-6. `queue` - create a Clutch Cut payload and dry-run receipt; submit only when approved.
-7. `review` - produce one human-readable packet with claims, assets, captions, and queue status.
+6. `render` - create a product-videogen request or local renderer plan; submit only when approved.
+7. `queue` - create a Clutch Cut payload and dry-run receipt; submit only when approved.
+8. `publish` - call Clutch Cut directly or write an import payload; never auto-post without approval.
+9. `review` - produce one human-readable packet with claims, assets, captions, API requests, and queue status.
 
 Each stage should be rerunnable and should read/write JSON so agents can inspect and patch artifacts between stages.
 
@@ -178,7 +197,7 @@ The skill should instruct agents to:
 6. Review claims against local evidence.
 7. Run `launchclip captions`.
 8. Run `launchclip queue --dry-run --queue clutchcut`.
-9. Present `REVIEW.md` to Roger before final render, upload, or queue submission.
+9. Present `REVIEW.md` to Roger before product-videogen render, upload, queue submission, or posting.
 
 ## Renderer Strategy
 
@@ -214,18 +233,55 @@ Submission should require:
 - a queue receipt saved to disk
 - no hidden credentials in logs
 
+## Product Videogen Strategy
+
+The posting system should treat product-videogen as the media generation/render provider and Clutch Cut as the scheduling/publishing provider.
+
+Product-videogen requests should be built from the approved `video.json`, renderer settings, captions, and demo artifacts:
+
+```json
+{
+  "schemaVersion": "launchclip.product-videogen.v1",
+  "project": "my-oss-tool",
+  "sourceManifest": "video/video.json",
+  "format": "short-30",
+  "assets": [],
+  "captions": [],
+  "approvalRequired": true,
+  "dryRun": true
+}
+```
+
+The adapter should support:
+
+- `launchclip render --provider product-videogen --dry-run` to preview the request
+- `launchclip render --provider product-videogen --submit` to create media after approval
+- storing returned asset IDs, URLs, thumbnails, durations, and provider job IDs
+- attaching rendered assets to `queue/clutchcut.*.json`
+- retry-safe receipts so agents can resume without duplicate posts
+
+The API integration should be narrow and swappable:
+
+- `POST /render-jobs` or equivalent for product video generation
+- `GET /render-jobs/:id` or equivalent for status
+- `POST /queue-items` or equivalent for Clutch Cut queue insertion
+- optional local import folder mode for early development before stable APIs exist
+
 ## Verification
 
 - Fixture repo produces deterministic `launchclip.json`, `video.json`, captions, queue payload, and `REVIEW.md`.
 - Demo command allowlist prevents accidental network or publish commands.
 - Captions include evidence or claim status for every product claim.
 - Queue command defaults to dry-run and refuses to submit without explicit config plus `--submit`.
+- Product-videogen command defaults to dry-run and refuses to submit without explicit config plus `--submit`.
+- Clutch Cut publish command records a dry-run payload and refuses live submission without approval.
 - Snapshot tests cover generated markdown and JSON.
 - CLI tests cover rerunning individual stages.
+- Adapter tests use fixture HTTP clients; no real API calls in CI.
 - `npm run check`, `npm test`, `npm run smoke`, and `npm run package:smoke` pass.
 
 ## Agent Prompt
 
 Build `launchclip`, a local-first TypeScript CLI and agent skill for turning OSS repositories into reviewable social promo packets.
 
-The V1 should orchestrate demo artifact creation, short-form video planning, platform caption drafting, and Clutch Cut queue payload generation. Keep external posting disabled by default. Write deterministic JSON and Markdown artifacts for every stage. Reuse the existing ecosystem boundaries: `video-skillkit` remains the grounded brief/manifest layer, `cutpilot` remains the local EDL/ffmpeg render path, and renderer adapters such as Remotion or Hyperframes stay optional future integrations. Include fixture-backed tests, a smoke command, release checks, and an agent skill that forces review before rendering, upload, queue submission, or posting.
+The V1 should orchestrate demo artifact creation, short-form video planning, platform caption drafting, product-videogen render request generation, and Clutch Cut queue/publish payload generation. Keep external posting disabled by default. Write deterministic JSON and Markdown artifacts for every stage. Reuse the existing ecosystem boundaries: `video-skillkit` remains the grounded brief/manifest layer, `cutpilot` remains the local EDL/ffmpeg render path, `repo-to-content`/`postmaker` can inform evidence-backed copy, product-videogen handles media generation, and Clutch Cut handles queueing/publishing. Renderer adapters such as Remotion or Hyperframes stay optional future integrations. Include fixture-backed tests, a smoke command, release checks, and an agent skill that forces review before rendering, upload, queue submission, or posting.
