@@ -21,7 +21,7 @@ Scored by: OpenClaw agent from Roger direction
 
 ## Pitch
 
-`launchclip` turns an OSS repo into a grounded social promo packet: demo artifacts, a short-form video edit plan, captions, generated media handoff, and a dry-run or approved queue payload for Clutch Cut.
+`launchclip` turns an OSS repo into a grounded social promo packet: demo artifacts, a short-form video edit plan, captions, and a product-videogen Review Feed submission that can later flow into Clutch Cut/social publishing after approval.
 
 ## Why It Matters
 
@@ -45,7 +45,7 @@ Can this be explained clearly in one sentence? Yes: "Run one command on an OSS r
 - Buffer, Hypefury, Typefully, Later, and native platform schedulers - useful scheduling references, but not local-first OSS-agent pipelines.
 - `repo-to-content` - adjacent evidence-grounded launch content generator from repo facts.
 - Clutch Cut - target queue and publishing system for Roger's content workflow.
-- Product videogen API - target media generation/rendering system for turning approved scene plans into assets.
+- Product-videogen API - target review, generation, and approval lane. Existing Review Feed behavior is built around pending videos, carousels, and photos.
 
 ### Star / Demand Signal
 
@@ -87,15 +87,11 @@ V1 can be built without external posting permissions:
   - include claim status and evidence links
   - include installation CTA and GitHub URL
   - keep editable drafts before queueing
-- Queue stage:
-  - write a Clutch Cut queue payload
-  - default to `--dry-run`
-  - support `--queue clutchcut` only after explicit config/approval
-  - write a queue receipt showing destination, assets, captions, and publish status
-- Publish bridge stage:
-  - submit approved video plans to product-videogen only with explicit `--submit`
-  - attach generated media asset IDs or URLs to the Clutch Cut queue payload
-  - support direct Clutch Cut API submission or local import-folder/dropfile workflows
+- Review submission stage:
+  - create a product-videogen Review Feed item with `approval_status=pending`
+  - preserve the OSS repo, demo artifacts, captions, evidence, and launch metadata in `metadata_json` / `recipe_json`
+  - support direct API submission only after explicit config/approval
+  - keep Clutch Cut queueing behind product-videogen approval instead of bypassing the Review Feed
   - save request/response receipts with secrets redacted
 - Agent skill:
   - clear workflow for agents to run inspect, create artifacts, review, render or dry-run, write captions, and queue
@@ -128,16 +124,12 @@ launchclip plan .launchclip/my-oss-tool \
 launchclip captions .launchclip/my-oss-tool \
   --platforms x,linkedin,tiktok,bluesky
 
-launchclip queue .launchclip/my-oss-tool \
-  --queue clutchcut \
-  --dry-run
-
 launchclip render .launchclip/my-oss-tool \
   --provider product-videogen \
   --dry-run
 
-launchclip publish .launchclip/my-oss-tool \
-  --provider clutchcut \
+launchclip submit-review .launchclip/my-oss-tool \
+  --provider product-videogen \
   --dry-run
 
 launchclip review .launchclip/my-oss-tool
@@ -162,9 +154,9 @@ Example output:
     linkedin.md
     tiktok.md
     bluesky.md
-  queue/
-    clutchcut.dry-run.json
-    clutchcut.publish.dry-run.json
+  review/
+    product-videogen-review.dry-run.json
+    product-videogen-review.receipt.json
     receipt.json
   REVIEW.md
 ```
@@ -179,9 +171,9 @@ The CLI should behave like a small pipeline runner with explicit stage receipts:
 4. `edit` - emit viral-format edit instructions and optionally call `cutpilot` or a renderer adapter.
 5. `caption` - create platform drafts using only evidence-backed claims.
 6. `render` - create a product-videogen request or local renderer plan; submit only when approved.
-7. `queue` - create a Clutch Cut payload and dry-run receipt; submit only when approved.
-8. `publish` - call Clutch Cut directly or write an import payload; never auto-post without approval.
-9. `review` - produce one human-readable packet with claims, assets, captions, API requests, and queue status.
+7. `submit-review` - create a product-videogen pending Review Feed item; dry-run by default.
+8. `approval-handoff` - rely on product-videogen approval to enqueue/schedule social output.
+9. `review` - produce one human-readable packet with claims, assets, captions, API requests, and product-videogen Review Feed status.
 
 Each stage should be rerunnable and should read/write JSON so agents can inspect and patch artifacts between stages.
 
@@ -196,8 +188,8 @@ The skill should instruct agents to:
 5. Run `launchclip plan` to create a short-form structure.
 6. Review claims against local evidence.
 7. Run `launchclip captions`.
-8. Run `launchclip queue --dry-run --queue clutchcut`.
-9. Present `REVIEW.md` to Roger before product-videogen render, upload, queue submission, or posting.
+8. Run `launchclip submit-review --dry-run --provider product-videogen`.
+9. Present `REVIEW.md` to Roger before product-videogen Review Feed submission, render, upload, queue submission, or posting.
 
 ## Renderer Strategy
 
@@ -210,9 +202,70 @@ The skill should instruct agents to:
 
 This keeps `video-skillkit` clean as the manifest/brief layer and lets rendering evolve independently.
 
+## Product-Videogen Review Feed Strategy
+
+Product-videogen should be the approval lane. `launchclip` should submit review-ready promo packets into product-videogen as pending review items rather than posting directly to Clutch Cut.
+
+Current product-videogen behavior already supports the core lifecycle:
+
+- Review Feed loads generated videos, carousels, and photos with `approval_status=pending`.
+- `PATCH /api/videos/{id}` approves or rejects a pending video.
+- Approval can sync the approved video into the social queue.
+- The public API already exposes video generation, video listing, approval, and queue endpoints.
+
+The API gap is clean ingestion for an external promo packet. V1 should add or use an endpoint shaped like:
+
+```http
+POST /api/v1/review-items
+```
+
+```json
+{
+  "content_type": "video",
+  "source": "launchclip",
+  "title": "runcard demo short",
+  "approval_status": "pending",
+  "video_url": "https://...",
+  "thumbnail_url": "https://...",
+  "duration_seconds": 30,
+  "social_caption": "Evidence-backed draft caption...",
+  "metadata_json": {
+    "source_repo": "rogerchappel/runcard",
+    "source_url": "https://github.com/rogerchappel/runcard",
+    "platform_targets": ["x", "linkedin", "tiktok"],
+    "launchclip_workspace": ".launchclip/runcard",
+    "claim_status": "evidence_backed"
+  },
+  "recipe_json": {
+    "source": "launchclip",
+    "video_manifest": {},
+    "demo_artifacts": [],
+    "captions": {}
+  }
+}
+```
+
+Implementation options:
+
+- Preferred: add a first-class public endpoint that creates a pending generated video/carousel/photo review record.
+- Minimum viable: allow product-videogen generation endpoints to accept `source=launchclip`, `external_trace_id`, `caption`, and `metadata_json`, then return the generated item IDs for Review Feed tracking.
+- Avoid: posting directly into Clutch Cut/social queue before product-videogen approval.
+
+`launchclip submit-review --provider product-videogen --submit` should return:
+
+```json
+{
+  "provider": "product-videogen",
+  "review_item_id": "uuid",
+  "review_url": "https://product-videogen.example/feed?tab=review",
+  "approval_status": "pending",
+  "submitted_at": "2026-06-10T00:00:00Z"
+}
+```
+
 ## Clutch Cut Queue Strategy
 
-V1 should write a local queue payload before it submits anything:
+Clutch Cut should remain downstream of product-videogen approval for this workflow. V1 may still write a local queue preview payload, but live queue insertion should happen through product-videogen's existing approval-to-social-queue path.
 
 ```json
 {
@@ -226,7 +279,7 @@ V1 should write a local queue payload before it submits anything:
 }
 ```
 
-Submission should require:
+Any direct Clutch Cut submission should require:
 
 - a local config file naming the Clutch Cut endpoint or import folder
 - explicit `--submit`
@@ -235,7 +288,7 @@ Submission should require:
 
 ## Product Videogen Strategy
 
-The posting system should treat product-videogen as the media generation/render provider and Clutch Cut as the scheduling/publishing provider.
+The posting system should treat product-videogen as the media generation/render provider and the approval authority. Clutch Cut/social queue is the scheduling/publishing provider after approval.
 
 Product-videogen requests should be built from the approved `video.json`, renderer settings, captions, and demo artifacts:
 
@@ -256,15 +309,19 @@ The adapter should support:
 
 - `launchclip render --provider product-videogen --dry-run` to preview the request
 - `launchclip render --provider product-videogen --submit` to create media after approval
+- `launchclip submit-review --provider product-videogen --dry-run` to preview the Review Feed request
+- `launchclip submit-review --provider product-videogen --submit` to create a pending Review Feed item
 - storing returned asset IDs, URLs, thumbnails, durations, and provider job IDs
-- attaching rendered assets to `queue/clutchcut.*.json`
+- storing the product-videogen review item ID and Review Feed URL
 - retry-safe receipts so agents can resume without duplicate posts
 
 The API integration should be narrow and swappable:
 
 - `POST /render-jobs` or equivalent for product video generation
 - `GET /render-jobs/:id` or equivalent for status
-- `POST /queue-items` or equivalent for Clutch Cut queue insertion
+- `POST /api/v1/review-items` or equivalent for pending Review Feed insertion
+- existing product-videogen approval endpoints for approval/rejection
+- existing product-videogen social queue endpoints after approval
 - optional local import folder mode for early development before stable APIs exist
 
 ## Verification
@@ -274,7 +331,8 @@ The API integration should be narrow and swappable:
 - Captions include evidence or claim status for every product claim.
 - Queue command defaults to dry-run and refuses to submit without explicit config plus `--submit`.
 - Product-videogen command defaults to dry-run and refuses to submit without explicit config plus `--submit`.
-- Clutch Cut publish command records a dry-run payload and refuses live submission without approval.
+- Product-videogen Review Feed submission creates or previews an `approval_status=pending` item.
+- Clutch Cut/social queue handoff happens after product-videogen approval.
 - Snapshot tests cover generated markdown and JSON.
 - CLI tests cover rerunning individual stages.
 - Adapter tests use fixture HTTP clients; no real API calls in CI.
@@ -284,4 +342,4 @@ The API integration should be narrow and swappable:
 
 Build `launchclip`, a local-first TypeScript CLI and agent skill for turning OSS repositories into reviewable social promo packets.
 
-The V1 should orchestrate demo artifact creation, short-form video planning, platform caption drafting, product-videogen render request generation, and Clutch Cut queue/publish payload generation. Keep external posting disabled by default. Write deterministic JSON and Markdown artifacts for every stage. Reuse the existing ecosystem boundaries: `video-skillkit` remains the grounded brief/manifest layer, `cutpilot` remains the local EDL/ffmpeg render path, `repo-to-content`/`postmaker` can inform evidence-backed copy, product-videogen handles media generation, and Clutch Cut handles queueing/publishing. Renderer adapters such as Remotion or Hyperframes stay optional future integrations. Include fixture-backed tests, a smoke command, release checks, and an agent skill that forces review before rendering, upload, queue submission, or posting.
+The V1 should orchestrate demo artifact creation, short-form video planning, platform caption drafting, product-videogen render request generation, and product-videogen Review Feed submission. Keep external posting disabled by default. Write deterministic JSON and Markdown artifacts for every stage. Reuse the existing ecosystem boundaries: `video-skillkit` remains the grounded brief/manifest layer, `cutpilot` remains the local EDL/ffmpeg render path, `repo-to-content`/`postmaker` can inform evidence-backed copy, product-videogen handles media generation and approval, and Clutch Cut/social queue handles queueing/publishing after approval. Renderer adapters such as Remotion or Hyperframes stay optional future integrations. Include fixture-backed tests, a smoke command, release checks, and an agent skill that forces review before rendering, upload, Review Feed submission, queue submission, or posting.
