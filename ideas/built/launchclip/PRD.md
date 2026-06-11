@@ -1,7 +1,15 @@
 # PRD: launchclip
 
-Status: ready
-Decision: ready for next OSS factory development round
+Status: built
+Decision: ship
+
+## Build Record
+
+- Repo: https://github.com/rogerchappel/launchclip
+- Release-candidate branch: `release-candidate/launchclip`
+- Pull request: https://github.com/rogerchappel/launchclip/pull/5
+- Built: 2026-06-11
+- Notes: public release-candidate refresh includes animated local demo video work and redacted demo evidence for shareable launch packets.
 
 ## Scorecard
 

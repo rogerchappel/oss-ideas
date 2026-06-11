@@ -1,6 +1,15 @@
 # PRD: skillpack
 
-Status: in-progress
+Status: built
+
+## Build Record
+
+- Repo: https://github.com/rogerchappel/skillpack
+- Release-candidate branch: `release-candidate/skillpack`
+- Pull request: https://github.com/rogerchappel/skillpack/pull/4
+- Built: 2026-06-11
+- Classification: ship
+- Notes: release candidate adds side-effect boundary linting for agent skill safety review.
 
 ## Summary
 
