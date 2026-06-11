@@ -1,6 +1,10 @@
 # rundossier PRD
 
-Status: in-progress
+Status: built
+Built: 2026-06-12
+Classification: ship
+Repository: https://github.com/rogerchappel/rundossier
+Release candidate: https://github.com/rogerchappel/rundossier/pull/3
 
 ## One-liner
 `rundossier` turns messy local agent/dev runs into portable evidence packets: commands, exit codes, touched files, git facts, test summaries, and a tiny HTML/Markdown dossier. 🗂️

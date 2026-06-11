@@ -1,6 +1,11 @@
 # promptcontract PRD
 
-Status: in-progress
+Status: built
+
+Built: 2026-06-12
+Classification: ship
+Repository: https://github.com/rogerchappel/promptcontract
+Release candidate: https://github.com/rogerchappel/promptcontract/pull/7
 
 ## Summary
 
@@ -47,4 +52,3 @@ unstated output formats, and broken examples before runtime.
 - Invalid fixture prompts fail with actionable messages.
 - Valid prompt packs pass locally and in CI.
 - README includes the contract schema and examples.
-
