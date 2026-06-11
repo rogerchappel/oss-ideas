@@ -1,6 +1,7 @@
 # PRD: meeting-followup-skill
 
-Status: in-progress
+Status: built
+Classification: ship
 
 ## Summary
 A local-first agent skill that turns meeting notes or transcripts into safe follow-up drafts, CRM-ready summaries, action registers, and verification checklists without writing to external systems.
@@ -24,3 +25,9 @@ Agents often draft follow-ups from meetings without clear action ownership, side
 
 ## Validation
 Fixture-backed tests, CLI smoke command, package import smoke, and release-candidate checklist.
+
+## Build Result
+
+- Repo: https://github.com/rogerchappel/meeting-followup-skill
+- Release candidate PR: https://github.com/rogerchappel/meeting-followup-skill/pull/1
+- Built by cron lane: oss-factory-agent-skills on 2026-06-11.

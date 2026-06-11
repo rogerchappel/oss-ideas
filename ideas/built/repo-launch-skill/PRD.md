@@ -1,6 +1,7 @@
 # PRD: repo-launch-skill
 
-Status: in-progress
+Status: built
+Classification: ship
 
 ## Summary
 A local-first agent skill that converts a repository manifest and README into launch material: release notes, demo scripts, post drafts, readiness gates, and public-safe messaging.
@@ -24,3 +25,9 @@ Repo launch work is repetitive and easy to overstate. Agents need a structured w
 
 ## Validation
 Fixture-backed tests, CLI smoke command, package import smoke, and release-candidate checklist.
+
+## Build Result
+
+- Repo: https://github.com/rogerchappel/repo-launch-skill
+- Release candidate PR: https://github.com/rogerchappel/repo-launch-skill/pull/1
+- Built by cron lane: oss-factory-agent-skills on 2026-06-11.
