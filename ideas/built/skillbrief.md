@@ -1,6 +1,6 @@
 # skillbrief
 
-Status: in-progress
+Status: built
 
 ## Summary
 
@@ -31,3 +31,10 @@ Agents often jump from code inspection directly to prose. That creates brittle l
 ## Classification Target
 
 ship
+
+## Build Result
+
+- Repo: https://github.com/rogerchappel/skillbrief
+- Release candidate PR: https://github.com/rogerchappel/skillbrief/pull/1
+- Branch: release-candidate/skillbrief
+- Classification: ship

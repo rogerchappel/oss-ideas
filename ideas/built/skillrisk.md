@@ -1,6 +1,6 @@
 # skillrisk
 
-Status: in-progress
+Status: built
 
 ## Summary
 
@@ -32,3 +32,10 @@ Skill proposals can be useful but unsafe when they omit action boundaries, exter
 ## Classification Target
 
 ship
+
+## Build Result
+
+- Repo: https://github.com/rogerchappel/skillrisk
+- Release candidate PR: https://github.com/rogerchappel/skillrisk/pull/1
+- Branch: release-candidate/skillrisk
+- Classification: ship
