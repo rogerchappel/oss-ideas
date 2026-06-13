@@ -1,9 +1,12 @@
 # Prompt Regression Skill
 
-Status: ready
+Status: built
 Type: agent-skill
 Owner: Roger
 Created: 2026-06-13
+Classification: ship
+Repo: https://github.com/rogerchappel/prompt-regression-skill
+PR: https://github.com/rogerchappel/prompt-regression-skill/pull/1
 
 ## Problem
 
