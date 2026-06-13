@@ -1,7 +1,9 @@
 # PRD: pr-evidence-skill
 
-Status: ready
-Decision: ready for OSS factory build on 2026-06-13
+Status: built
+Decision: built by OSS Factory Agent Skills on 2026-06-14
+Classification: ship
+Repository: https://github.com/rogerchappel/pr-evidence-skill
 
 ## Scorecard
 
