@@ -1,6 +1,6 @@
 # Meetingbrief Skill
 
-Status: in-progress
+Status: built
 
 ## Summary
 
@@ -35,3 +35,10 @@ Agents often receive messy meeting inputs: notes, attendee lists, recent project
 ## Classification Target
 
 Ship if the CLI produces stable prep briefs from fixtures and documents approval requirements for any future external action.
+
+## Build Result
+
+- Repo: https://github.com/rogerchappel/meetingbrief-skill
+- Release candidate PR: https://github.com/rogerchappel/meetingbrief-skill/pull/1
+- Classification: ship
+- Built by cron lane: oss-factory-agent-skills on 2026-06-15 Australia/Brisbane

@@ -1,6 +1,6 @@
 # Actionplan Skill
 
-Status: in-progress
+Status: built
 
 ## Summary
 
@@ -35,3 +35,10 @@ Agents need a reusable way to show what they would do before touching external s
 ## Classification Target
 
 Ship if the dry-run plan is deterministic, auditable, and clearly separates read-only, write, and destructive action classes.
+
+## Build Result
+
+- Repo: https://github.com/rogerchappel/actionplan-skill
+- Release candidate PR: https://github.com/rogerchappel/actionplan-skill/pull/1
+- Classification: ship
+- Built by cron lane: oss-factory-agent-skills on 2026-06-15 Australia/Brisbane

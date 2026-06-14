@@ -1,6 +1,6 @@
 # Repolens Skill
 
-Status: in-progress
+Status: built
 
 ## Summary
 
@@ -35,3 +35,10 @@ Before reviewing a repo, agents spend time rediscovering project shape and obvio
 ## Classification Target
 
 Ship if fixture reviews are stable, useful, and honest about heuristic limitations.
+
+## Build Result
+
+- Repo: https://github.com/rogerchappel/repolens-skill
+- Release candidate PR: https://github.com/rogerchappel/repolens-skill/pull/1
+- Classification: ship
+- Built by cron lane: oss-factory-agent-skills on 2026-06-15 Australia/Brisbane
