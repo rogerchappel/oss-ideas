@@ -1,6 +1,8 @@
 # mcpmap PRD
 
-Status: in-progress
+Status: built
+Classification: ship
+Built: 2026-06-14 via release-candidate PR https://github.com/rogerchappel/mcpmap/pull/7
 
 ## One-liner
 `mcpmap` inventories local Model Context Protocol configs and produces a redacted map of servers, commands, environment needs, and exposed tool names. 🧭

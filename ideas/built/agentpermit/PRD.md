@@ -1,6 +1,8 @@
 # AgentPermit PRD
 
-Status: in-progress
+Status: built
+Classification: ship
+Built: 2026-06-14 via release-candidate PR https://github.com/rogerchappel/agentpermit/pull/7
 
 ## Pitch
 

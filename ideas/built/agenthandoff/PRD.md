@@ -1,6 +1,8 @@
 # agenthandoff
 
-Status: in-progress
+Status: built
+Classification: ship
+Built: 2026-06-14 via release-candidate PR https://github.com/rogerchappel/agenthandoff/pull/7
 Decision: selected for 2026-05-08 OSS factory run
 
 ## Scorecard
