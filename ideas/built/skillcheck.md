@@ -1,6 +1,6 @@
 # skillcheck
 
-Status: in-progress
+Status: built
 
 ## Summary
 
@@ -30,3 +30,12 @@ Agent skills are easy to publish with missing operational details. Builders need
 - Ship if the CLI can catch missing safety/validation sections and explain remediation.
 - Incubate if the first rule set is useful but needs more skill package formats.
 - Kill/merge if it duplicates an existing skill drift tool without a clearer local linting use case.
+
+## Build Result
+
+- Repo: https://github.com/rogerchappel/skillcheck
+- Release candidate branch: `release-candidate/skillcheck`
+- PR: https://github.com/rogerchappel/skillcheck/pull/1
+- Classification: ship
+- Verification: `npm test`, `npm run check`, `npm run smoke`, `npm run validate` passed.
+- Branch protection: `main` protected with required PR review.

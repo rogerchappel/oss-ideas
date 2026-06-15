@@ -1,6 +1,6 @@
 # skillfixture
 
-Status: in-progress
+Status: built
 
 ## Summary
 
@@ -29,3 +29,12 @@ Skill authors often describe examples in prose but do not preserve them as runna
 - Ship if generated fixtures are deterministic and useful for CLI/import smoke tests.
 - Incubate if extraction needs more conventions for varied skill docs.
 - Kill/merge if it overlaps a future skill packager without standalone regression value.
+
+## Build Result
+
+- Repo: https://github.com/rogerchappel/skillfixture
+- Release candidate branch: `release-candidate/skillfixture`
+- PR: https://github.com/rogerchappel/skillfixture/pull/1
+- Classification: ship
+- Verification: `npm test`, `npm run check`, `npm run smoke`, `npm run validate` passed.
+- Branch protection: `main` protected with required PR review.
