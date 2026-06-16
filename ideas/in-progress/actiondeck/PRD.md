@@ -1,6 +1,12 @@
 # ActionDeck PRD
 
 Status: in-progress
+Decision: ship
+Updated: 2026-06-16
+Repo: https://github.com/rogerchappel/actiondeck
+Release candidate PR: https://github.com/rogerchappel/actiondeck/pull/12
+
+Outcome: Added floating GitHub Actions ref review items, fixture-backed tests, and release-check verification.
 
 ## One-liner
 
@@ -44,4 +50,3 @@ ActionDeck is intentionally a small local-first reviewer, not a hosted CI produc
 
 Inspired by recurring GitHub Actions review pain and GitHub's public workflow syntax documentation:
 https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions
-

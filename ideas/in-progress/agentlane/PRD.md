@@ -1,6 +1,12 @@
 # PRD: agentlane
 
 Status: in-progress
+Decision: ship
+Updated: 2026-06-16
+Repo: https://github.com/rogerchappel/agentlane
+Release candidate PR: https://github.com/rogerchappel/agentlane/pull/15
+
+Outcome: Added dependency maintenance lanes for Node repos with lockfiles, conservative path boundaries, and unit coverage.
 ## Scorecard
 
 Total: 79/100
