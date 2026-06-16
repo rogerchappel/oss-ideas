@@ -1,7 +1,10 @@
 # artifact-evidence-skill
 
-Status: ready
+Status: built
 Source: cron replenishment for OSS Factory Agent Skills, 2026-06-17
+Repo: https://github.com/rogerchappel/artifact-evidence-skill
+PR: https://github.com/rogerchappel/artifact-evidence-skill/pull/1
+Classification: ship
 
 ## Problem
 

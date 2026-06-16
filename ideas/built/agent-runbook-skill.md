@@ -1,7 +1,10 @@
 # agent-runbook-skill
 
-Status: ready
+Status: built
 Source: cron replenishment for OSS Factory Agent Skills, 2026-06-17
+Repo: https://github.com/rogerchappel/agent-runbook-skill
+PR: https://github.com/rogerchappel/agent-runbook-skill/pull/1
+Classification: ship
 
 ## Problem
 

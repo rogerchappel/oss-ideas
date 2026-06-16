@@ -1,7 +1,10 @@
 # skill-portability-audit
 
-Status: ready
+Status: built
 Source: cron replenishment for OSS Factory Agent Skills, 2026-06-17
+Repo: https://github.com/rogerchappel/skill-portability-audit
+PR: https://github.com/rogerchappel/skill-portability-audit/pull/1
+Classification: ship
 
 ## Problem
 
