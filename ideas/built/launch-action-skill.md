@@ -1,6 +1,9 @@
 # Launch Action Skill PRD
 
-Status: ready
+Status: built
+Classification: ship
+Repo: https://github.com/rogerchappel/launch-action-skill
+PR: https://github.com/rogerchappel/launch-action-skill/pull/1
 Owner: OSS factory
 Lane: agent skills
 Created: 2026-06-17

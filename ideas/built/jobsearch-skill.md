@@ -1,6 +1,9 @@
 # JobSearch Skill PRD
 
-Status: ready
+Status: built
+Classification: ship
+Repo: https://github.com/rogerchappel/jobsearch-skill
+PR: https://github.com/rogerchappel/jobsearch-skill/pull/1
 Owner: OSS factory
 Lane: agent skills
 Created: 2026-06-17
