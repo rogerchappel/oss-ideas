@@ -1,7 +1,15 @@
 # PRD: skillforge
 
 Status: in-progress
-Decision: backlog
+Decision: incubate
+
+Updated: 2026-06-16
+Repo: https://github.com/rogerchappel/skillforge
+Release candidate PR: https://github.com/rogerchappel/skillforge/pull/9
+
+Outcome: Added a compatibility matrix API/CLI for host support, renderability, lint blockers, and warnings.
+
+Incubation note: release checks pass, but activation semantics still need a follow-up because the existing smoke output activates one anti-example-style prompt.
 
 ## Scorecard
 

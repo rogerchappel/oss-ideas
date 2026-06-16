@@ -1,6 +1,13 @@
 # ReviewCue PRD
 
-Status: in-progress
+Status: built
+Decision: ship
+
+Built: 2026-06-16
+Repo: https://github.com/rogerchappel/reviewcue
+Release candidate PR: https://github.com/rogerchappel/reviewcue/pull/8
+
+Outcome: Added deterministic review cues, review packet generation, `pack`/`cues`/`inspect` CLI commands, tests, and `SKILL.md` agent usage guidance.
 
 ## Summary
 

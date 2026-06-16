@@ -1,7 +1,13 @@
 # skillcrate
 
-Status: in-progress
-Decision: in-progress
+Status: built
+Decision: ship
+
+Built: 2026-06-16
+Repo: https://github.com/rogerchappel/skillcrate
+Release candidate PR: https://github.com/rogerchappel/skillcrate/pull/6
+
+Outcome: Added crate verification API/CLI coverage so skill bundles can be checked for safe paths, byte counts, and digests before unpacking.
 
 ## Scorecard
 
