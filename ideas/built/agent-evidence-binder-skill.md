@@ -1,6 +1,6 @@
 # agent-evidence-binder-skill
 
-Status: ready
+Status: built
 
 ## Summary
 
@@ -29,3 +29,7 @@ Local files only. No web fetches, no publishing, no external account writes.
 ## Classification
 
 agent-skill; repo-to-content; release-readiness
+
+## Build result
+
+Built public repository on 2026-06-18. Classification: ship.

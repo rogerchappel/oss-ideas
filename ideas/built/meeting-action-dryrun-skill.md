@@ -1,6 +1,6 @@
 # meeting-action-dryrun-skill
 
-Status: ready
+Status: built
 
 ## Summary
 
@@ -30,3 +30,7 @@ review artifacts only.
 ## Classification
 
 agent-skill; meeting-prep; action-dryrun
+
+## Build result
+
+Built public repository on 2026-06-18. Classification: ship.

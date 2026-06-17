@@ -1,6 +1,6 @@
 # connector-approval-ledger-skill
 
-Status: ready
+Status: built
 
 ## Summary
 
@@ -30,3 +30,7 @@ treated as an executor.
 ## Classification
 
 agent-skill; connector-router; action-dryrun; audit
+
+## Build result
+
+Built public repository on 2026-06-18. Classification: ship.
