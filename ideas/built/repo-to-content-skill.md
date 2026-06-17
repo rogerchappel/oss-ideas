@@ -1,6 +1,6 @@
 # Repo To Content Skill
 
-Status: in-progress
+Status: built
 
 ## Summary
 
@@ -30,3 +30,10 @@ Roger's OSS promotion loop needs repeatable, evidence-backed content generation 
 ## Classification target
 
 Ship if the CLI produces a useful launch brief from fixtures and flags unsupported claims.
+
+## Build result
+
+- Repo: https://github.com/rogerchappel/repo-to-content-skill
+- PR: https://github.com/rogerchappel/repo-to-content-skill/pull/1
+- Classification: ship
+- Built: 2026-06-17

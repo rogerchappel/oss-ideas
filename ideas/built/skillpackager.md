@@ -1,6 +1,6 @@
 # Skillpackager
 
-Status: in-progress
+Status: built
 
 ## Summary
 
@@ -30,3 +30,10 @@ Agent skill repos are accumulating, but each one still needs repeatable checks f
 ## Classification target
 
 Ship if the CLI can validate fixtures and generate both JSON and Markdown reports locally.
+
+## Build result
+
+- Repo: https://github.com/rogerchappel/skillpackager
+- PR: https://github.com/rogerchappel/skillpackager/pull/1
+- Classification: ship
+- Built: 2026-06-17
