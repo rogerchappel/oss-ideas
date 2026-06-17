@@ -1,6 +1,6 @@
 # Repo To Content Skill
 
-Status: ready
+Status: in-progress
 
 ## Summary
 
