@@ -1,6 +1,6 @@
 # Tool Use Budget Skill
 
-Status: ready
+Status: built
 
 ## Summary
 
@@ -50,4 +50,6 @@ The skill must be dry-run only. It may recommend approval gates but must not exe
 
 ## Classification
 
-Initial target: ship if the CLI, fixtures, docs, and smoke check are complete.
+Built repository: https://github.com/rogerchappel/tool-use-budget-skill
+Release-candidate PR: https://github.com/rogerchappel/tool-use-budget-skill/pull/1
+Classification: ship

@@ -1,6 +1,6 @@
 # Agent Claim Check Skill
 
-Status: ready
+Status: built
 
 ## Summary
 
@@ -50,4 +50,6 @@ The skill is local-first and must not fetch live web pages or modify external ac
 
 ## Classification
 
-Initial target: ship if the CLI, fixtures, docs, and smoke check are complete.
+Built repository: https://github.com/rogerchappel/agent-claim-check-skill
+Release-candidate PR: https://github.com/rogerchappel/agent-claim-check-skill/pull/1
+Classification: ship
