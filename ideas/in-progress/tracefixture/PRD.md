@@ -1,6 +1,13 @@
 # PRD: tracefixture
 
 Status: in-progress
+Decision: ship
+Updated: 2026-06-20
+Repo: https://github.com/rogerchappel/tracefixture
+Release candidate PR: https://github.com/rogerchappel/tracefixture/pull/4
+
+Outcome: Added replay-free fixture inspection CLI/API, agent SKILL.md packaging, tests, smoke coverage, and orchestration docs.
+
 Decision: build now
 Factory run: 2026-05-17 PM
 
@@ -53,4 +60,3 @@ Run `npm test`, `npm run check`, `npm run build`, `npm run smoke`, `bash scripts
 ## Agent Prompt
 
 Build `tracefixture` as a local CLI trace fixture recorder/replayer with conservative redaction and docs-friendly output.
-

@@ -1,6 +1,12 @@
 # runreceipt PRD
 
 Status: in-progress
+Decision: ship
+Updated: 2026-06-20
+Repo: https://github.com/rogerchappel/runreceipt
+Release candidate PR: https://github.com/rogerchappel/runreceipt/pull/9
+
+Outcome: Added agent SKILL.md packaging, stronger receipt artifact/timing verification, fixture-backed tests, and release-readiness documentation.
 
 ## Summary
 
