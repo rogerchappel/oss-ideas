@@ -1,6 +1,12 @@
 # RunLedger Skill PRD
 
-Status: in-progress
+Status: built
+Decision: ship
+Built: 2026-06-19
+Repo: https://github.com/rogerchappel/runledger-skill
+Release candidate PR: https://github.com/rogerchappel/runledger-skill/pull/1
+
+Outcome: Built a local-first TypeScript agent skill and CLI that parses command-run JSONL ledgers, renders Markdown/JSON verification summaries, checks required-command policy, redacts secret-like output, and ships fixture-backed tests plus smoke validation.
 
 ## Summary
 
@@ -47,4 +53,3 @@ runledger-skill check examples/runs.jsonl --require "npm test" --fail-on warning
 - README covers quickstart, examples, safety notes, limitations, and JSONL schema.
 - Public repo exists under `rogerchappel/runledger-skill`.
 - Release-candidate PR exists with verification results.
-

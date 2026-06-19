@@ -1,6 +1,12 @@
 # ToolTrace Skill PRD
 
-Status: in-progress
+Status: built
+Decision: ship
+Built: 2026-06-19
+Repo: https://github.com/rogerchappel/tooltrace-skill
+Release candidate PR: https://github.com/rogerchappel/tooltrace-skill/pull/1
+
+Outcome: Built a local-first TypeScript agent skill and CLI that parses tool-call JSONL events, summarizes commands/tools/files/approval risks, renders Markdown/JSON proof reports, and ships fixture-backed tests plus smoke validation.
 
 ## Summary
 
@@ -47,4 +53,3 @@ tooltrace-skill check examples/tool-events.jsonl --fail-on approval
 - README covers quickstart, examples, safety notes, limitations, and JSONL schema.
 - Public repo exists under `rogerchappel/tooltrace-skill`.
 - Release-candidate PR exists with verification results.
-
