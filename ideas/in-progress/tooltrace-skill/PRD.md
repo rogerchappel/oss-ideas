@@ -1,6 +1,6 @@
 # ToolTrace Skill PRD
 
-Status: ready
+Status: in-progress
 
 ## Summary
 
