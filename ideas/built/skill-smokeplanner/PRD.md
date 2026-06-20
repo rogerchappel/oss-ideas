@@ -1,8 +1,10 @@
 # PRD: skill-smokeplanner
 
-Status: ready
+Status: built
 Decision: build now
 Created: 2026-06-20
+Built: 2026-06-20
+Classification: ship
 
 ## Pitch
 
