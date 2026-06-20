@@ -1,8 +1,9 @@
 # PRD: skill-release-gate
 
-Status: ready
+Status: in-progress
 Decision: build now
 Created: 2026-06-20
+Updated: 2026-06-20
 
 ## One-liner
 
@@ -45,4 +46,3 @@ skill-release-gate check ./skills/release-helper --format json
 - Unit tests for parser, checks, scoring, and renderers.
 - CLI smoke test against local fixtures.
 - README examples, safety notes, and release-candidate checklist.
-

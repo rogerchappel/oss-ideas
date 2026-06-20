@@ -1,8 +1,9 @@
 # PRD: agent-eval-pack-skill
 
-Status: ready
+Status: in-progress
 Decision: build now
 Created: 2026-06-20
+Updated: 2026-06-20
 
 ## One-liner
 
@@ -45,4 +46,3 @@ agent-eval-pack validate dist/eval-pack/evals.json
 - Unit tests for extraction, redaction, validation, and rendering.
 - CLI smoke commands over fixtures.
 - Docs with side-effect boundaries, limitations, and reviewer workflow.
-
