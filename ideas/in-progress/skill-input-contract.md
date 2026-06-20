@@ -1,6 +1,6 @@
 # Skill Input Contract
 
-Status: ready
+Status: in-progress
 
 ## Summary
 

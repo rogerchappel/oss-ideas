@@ -1,6 +1,6 @@
 # Skill Output Gate
 
-Status: ready
+Status: in-progress
 
 ## Summary
 
