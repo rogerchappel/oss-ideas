@@ -1,7 +1,12 @@
 # crawldeck
 
 Status: in-progress
-Decision: selected for OSS factory build on 2026-05-07
+Decision: ship
+Updated: 2026-06-20
+Repo: https://github.com/rogerchappel/crawldeck
+Release candidate branch: release-candidate/crawldeck
+
+Outcome: Added SKILL.md instructions, adapter approval boundaries, package allowlist updates for skill/docs/scripts, release notes, and release-check verification.
 
 ## Scorecard
 
