@@ -1,6 +1,12 @@
 # AgentInbox PRD
 
 Status: in-progress
+Decision: ship
+Updated: 2026-06-20
+Repo: https://github.com/rogerchappel/agentinbox
+Release candidate branch: release-candidate/agentinbox
+
+Outcome: Added scan/brief/lint CLI workflows, JSON and JSONL ingestion, generated brief/queue artifacts, SKILL.md instructions, fixture-backed tests, and release-check verification.
 
 ## Summary
 
