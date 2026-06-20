@@ -1,9 +1,15 @@
 # PRD: skill-release-gate
 
-Status: in-progress
-Decision: build now
+Status: built
+Decision: ship
 Created: 2026-06-20
 Updated: 2026-06-20
+Repo: https://github.com/rogerchappel/skill-release-gate
+Release candidate PR: https://github.com/rogerchappel/skill-release-gate/pull/1
+
+Outcome: Built a local-first Node CLI that scores reusable agent skill folders for release readiness, emits Markdown/JSON reports, includes pass/warn/fail fixtures, and documents skill usage plus release-candidate workflow.
+
+Verification: `npm test`, `npm run check`, `npm run build`, `npm run smoke`, and `bash scripts/validate.sh` passed on 2026-06-20.
 
 ## One-liner
 

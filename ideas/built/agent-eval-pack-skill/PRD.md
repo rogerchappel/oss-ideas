@@ -1,9 +1,15 @@
 # PRD: agent-eval-pack-skill
 
-Status: in-progress
-Decision: build now
+Status: built
+Decision: ship
 Created: 2026-06-20
 Updated: 2026-06-20
+Repo: https://github.com/rogerchappel/agent-eval-pack-skill
+Release candidate PR: https://github.com/rogerchappel/agent-eval-pack-skill/pull/1
+
+Outcome: Built a local-first Node CLI that converts structured Markdown agent run notes into JSON eval packs and Markdown review briefs with redaction, validation, fixtures, and reusable skill instructions.
+
+Verification: `npm test`, `npm run check`, `npm run build`, `npm run smoke`, and `bash scripts/validate.sh` passed on 2026-06-20 after fixing final-section Markdown parsing.
 
 ## One-liner
 
