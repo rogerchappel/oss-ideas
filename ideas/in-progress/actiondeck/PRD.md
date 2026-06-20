@@ -2,11 +2,11 @@
 
 Status: in-progress
 Decision: ship
-Updated: 2026-06-16
+Updated: 2026-06-21
 Repo: https://github.com/rogerchappel/actiondeck
-Release candidate PR: https://github.com/rogerchappel/actiondeck/pull/12
+Release candidate PR: https://github.com/rogerchappel/actiondeck/pull/14
 
-Outcome: Added floating GitHub Actions ref review items, fixture-backed tests, and release-check verification.
+Outcome: Added review-plan gates for CI findings, exported the review-plan API, and documented ActionDeck as an agent skill.
 
 ## One-liner
 

@@ -1,6 +1,13 @@
 # PRD: toolhutch
 
 Status: in-progress
+Decision: ship
+Updated: 2026-06-21
+Repo: https://github.com/rogerchappel/toolhutch
+Release candidate PR: https://github.com/rogerchappel/toolhutch/pull/8
+
+Outcome: Added approval-plan gates to risk reports, fixture-backed approval tests, and an agent skill usage guide.
+
 Decision: selected for OSS factory build on 2026-05-10
 
 ## Scorecard
