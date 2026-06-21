@@ -1,7 +1,8 @@
 # tooltrace
 
-Status: ready
+Status: in-progress
 Decision: build now
+Release-candidate PR: https://github.com/rogerchappel/tooltrace/pull/7
 
 ## Scorecard
 

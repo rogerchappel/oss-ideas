@@ -1,8 +1,9 @@
 # PRD: agentprimer
 
-Status: ready
+Status: in-progress
 Decision: build now
 Factory run: 2026-05-17 PM
+Release-candidate PR: https://github.com/rogerchappel/agentprimer/pull/11
 
 ## Pitch
 
