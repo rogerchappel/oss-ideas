@@ -1,6 +1,6 @@
 # tooltrace
 
-Status: in-progress
+Status: ready
 Decision: build now
 
 ## Scorecard

@@ -1,6 +1,6 @@
 # PRD: agentprimer
 
-Status: in-progress
+Status: ready
 Decision: build now
 Factory run: 2026-05-17 PM
 
@@ -53,4 +53,3 @@ Run `npm test`, `npm run check`, `npm run build`, `npm run smoke`, `bash scripts
 ## Agent Prompt
 
 Build `agentprimer` as a local-first deterministic repo onboarding CLI. Keep reports concise, evidence-linked, and directly useful for human/agent handoff.
-

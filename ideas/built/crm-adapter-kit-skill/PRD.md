@@ -1,6 +1,10 @@
 # crm-adapter-kit-skill PRD
 
-Status: in-progress
+Status: built
+
+Classification: ship
+
+Built: 2026-06-22
 
 ## Problem
 
