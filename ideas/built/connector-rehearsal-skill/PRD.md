@@ -1,7 +1,7 @@
 # PRD: connector-rehearsal-skill
 
-Status: ready
-Decision: build next
+Status: built
+Decision: ship
 Created: 2026-06-22
 
 ## Pitch
@@ -52,3 +52,9 @@ Run `npm test`, `npm run check`, `npm run build`, `npm run smoke`, `bash scripts
 ## Agent Prompt
 
 Build `connector-rehearsal-skill` as a local-first dry-run planner for connector actions. It must never call external services in V1; all outputs are review artifacts for human approval.
+
+## Build Result
+
+- Repo: https://github.com/rogerchappel/connector-rehearsal-skill
+- Release-candidate PR: https://github.com/rogerchappel/connector-rehearsal-skill/pull/1
+- Classification: ship

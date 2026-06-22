@@ -1,7 +1,7 @@
 # PRD: skillfixture-hub
 
-Status: ready
-Decision: build next
+Status: built
+Decision: ship
 Created: 2026-06-22
 
 ## Pitch
@@ -52,3 +52,9 @@ Run `npm test`, `npm run check`, `npm run build`, `npm run smoke`, `bash scripts
 ## Agent Prompt
 
 Build `skillfixture-hub` as a local-first activation fixture toolkit for portable agent skills. Keep outputs deterministic, reviewable, and safe for public repos.
+
+## Build Result
+
+- Repo: https://github.com/rogerchappel/skillfixture-hub
+- Release-candidate PR: https://github.com/rogerchappel/skillfixture-hub/pull/1
+- Classification: ship
