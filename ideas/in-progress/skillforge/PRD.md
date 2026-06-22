@@ -5,9 +5,9 @@ Decision: incubate
 
 Updated: 2026-06-22
 Repo: https://github.com/rogerchappel/skillforge
-Release candidate PR: https://github.com/rogerchappel/skillforge/pull/10
+Release candidate PR: https://github.com/rogerchappel/skillforge/pull/11
 
-Outcome: Honored activation anti-examples as vetoes, surfaced blockers in fixture output, and documented the manifest semantics.
+Outcome: Honored activation anti-examples as vetoes, surfaced blockers in fixture output, documented the manifest semantics, and added JSON/Markdown validation reports for release gates.
 
 Incubation note: release checks pass; anti-example activation semantics now have fixture coverage.
 
