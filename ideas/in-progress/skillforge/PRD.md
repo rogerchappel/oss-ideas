@@ -3,13 +3,13 @@
 Status: in-progress
 Decision: incubate
 
-Updated: 2026-06-16
+Updated: 2026-06-22
 Repo: https://github.com/rogerchappel/skillforge
-Release candidate PR: https://github.com/rogerchappel/skillforge/pull/9
+Release candidate PR: https://github.com/rogerchappel/skillforge/pull/10
 
-Outcome: Added a compatibility matrix API/CLI for host support, renderability, lint blockers, and warnings.
+Outcome: Honored activation anti-examples as vetoes, surfaced blockers in fixture output, and documented the manifest semantics.
 
-Incubation note: release checks pass, but activation semantics still need a follow-up because the existing smoke output activates one anti-example-style prompt.
+Incubation note: release checks pass; anti-example activation semantics now have fixture coverage.
 
 ## Scorecard
 

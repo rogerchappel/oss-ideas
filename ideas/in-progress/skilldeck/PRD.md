@@ -2,11 +2,11 @@
 
 Status: in-progress
 Decision: ship
-Updated: 2026-06-16
+Updated: 2026-06-22
 Repo: https://github.com/rogerchappel/skilldeck
-Release candidate PR: https://github.com/rogerchappel/skilldeck/pull/6
+Release candidate PR: https://github.com/rogerchappel/skilldeck/pull/8
 
-Outcome: Added strict-mode validation guidance for SKILL.md verification notes and updated fixtures/tests.
+Outcome: Added strict-mode validation for portable SKILL.md sections, expanded fixtures, and documented the stricter contract.
 Decision: selected for OSS factory build on 2026-05-10
 
 ## Scorecard
