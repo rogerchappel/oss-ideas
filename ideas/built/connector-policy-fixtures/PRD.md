@@ -1,6 +1,8 @@
 # PRD: connector-policy-fixtures
 
-Status: ready
+Status: built
+Repo: https://github.com/rogerchappel/connector-policy-fixtures
+Classification: ship
 Decision: build next
 Created: 2026-06-22
 

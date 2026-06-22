@@ -1,6 +1,8 @@
 # PRD: skill-evidence-map
 
-Status: ready
+Status: built
+Repo: https://github.com/rogerchappel/skill-evidence-map
+Classification: ship
 Decision: build next
 Created: 2026-06-22
 
