@@ -1,8 +1,8 @@
 # PRD: skill-redaction-audit
 
-Status: ready
+Status: in-progress
 Decision: build now
-Updated: 2026-06-23
+Updated: 2026-06-24
 
 ## Scorecard
 
