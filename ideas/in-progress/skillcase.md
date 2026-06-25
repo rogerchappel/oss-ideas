@@ -1,6 +1,6 @@
 # skillcase
 
-Status: ready
+Status: in-progress
 
 ## Summary
 
