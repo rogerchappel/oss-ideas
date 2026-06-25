@@ -1,6 +1,6 @@
 # skillcase
 
-Status: in-progress
+Status: built
 
 ## Summary
 
@@ -30,3 +30,12 @@ Many agent skills explain when to use them, but lack concrete regression cases t
 - Ship if maintainers can generate useful fixture skeletons and catch missing regression coverage.
 - Incubate if generated cases need more tuning for varied skill formats.
 - Kill/merge if it overlaps an existing fixture tool without a more focused skill-regression workflow.
+
+## Build Result
+
+- Repo: https://github.com/rogerchappel/skillcase
+- Release candidate branch: `release-candidate/skillcase`
+- PR: https://github.com/rogerchappel/skillcase/pull/1
+- Classification: ship
+- Verification: `npm test`, `npm run check`, `npm run smoke`, and `npm run validate` passed.
+- Branch protection: `main` protected with required PR review.

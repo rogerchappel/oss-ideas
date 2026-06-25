@@ -1,6 +1,6 @@
 # skillenv
 
-Status: in-progress
+Status: built
 
 ## Summary
 
@@ -32,3 +32,12 @@ Agent skills often mention tools, credentials, or command requirements in prose,
 - Ship if the CLI produces useful preflight reports and catches missing approval language.
 - Incubate if extraction works for common skill sections but needs more formats.
 - Kill/merge if it duplicates an existing skill lint repo without clearer environment-readiness value.
+
+## Build Result
+
+- Repo: https://github.com/rogerchappel/skillenv
+- Release candidate branch: `release-candidate/skillenv`
+- PR: https://github.com/rogerchappel/skillenv/pull/1
+- Classification: ship
+- Verification: `npm test`, `npm run check`, `npm run smoke`, and `npm run validate` passed.
+- Branch protection: `main` protected with required PR review.
