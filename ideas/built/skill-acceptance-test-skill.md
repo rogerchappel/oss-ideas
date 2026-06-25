@@ -1,6 +1,9 @@
 # Skill Acceptance Test Skill
 
-Status: in-progress
+Status: built
+Classification: ship
+Repo: https://github.com/rogerchappel/skill-acceptance-test-skill
+PR: https://github.com/rogerchappel/skill-acceptance-test-skill/pull/1
 
 ## Summary
 

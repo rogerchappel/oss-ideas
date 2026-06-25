@@ -1,6 +1,9 @@
 # Connector Permission Diff Skill
 
-Status: in-progress
+Status: built
+Classification: ship
+Repo: https://github.com/rogerchappel/connector-permission-diff-skill
+PR: https://github.com/rogerchappel/connector-permission-diff-skill/pull/1
 
 ## Summary
 
