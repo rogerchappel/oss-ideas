@@ -1,6 +1,6 @@
 # Agent Handoff Contract Skill
 
-Status: ready
+Status: built
 
 ## Summary
 
@@ -44,3 +44,10 @@ Roger's agentic workflows increasingly involve delegated research, implementatio
 - `ship`: catches fixture failures and produces useful handoff reports
 - `incubate`: useful checklist but needs richer adapters
 - `kill/merge`: duplicates run-audit or output-gate repos without a distinct handoff contract
+
+## Build result
+
+- Repo: https://github.com/rogerchappel/agent-handoff-contract-skill
+- PR: https://github.com/rogerchappel/agent-handoff-contract-skill/pull/1
+- Classification: ship
+- Built: 2026-06-25

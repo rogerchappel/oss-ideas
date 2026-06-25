@@ -1,6 +1,6 @@
 # Repo Demo Plan Skill
 
-Status: ready
+Status: built
 
 ## Summary
 
@@ -45,3 +45,10 @@ Roger's OSS promotion loop needs repeatable demo preparation that stays grounded
 - `ship`: produces useful fixture-backed demo plans and flags unsupported claims
 - `incubate`: plan shape is useful but needs more language/package adapters
 - `kill/merge`: duplicates repo-to-content or video prep without a distinct demo-rehearsal workflow
+
+## Build result
+
+- Repo: https://github.com/rogerchappel/repo-demo-plan-skill
+- PR: https://github.com/rogerchappel/repo-demo-plan-skill/pull/1
+- Classification: ship
+- Built: 2026-06-25
