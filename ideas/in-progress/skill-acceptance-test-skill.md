@@ -1,6 +1,6 @@
 # Skill Acceptance Test Skill
 
-Status: ready
+Status: in-progress
 
 ## Summary
 

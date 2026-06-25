@@ -1,6 +1,6 @@
 # Connector Permission Diff Skill
 
-Status: ready
+Status: in-progress
 
 ## Summary
 
