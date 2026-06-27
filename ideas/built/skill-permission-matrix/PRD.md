@@ -1,9 +1,9 @@
 # Skill Permission Matrix PRD
 
-Status: ready
-Decision: build next
+Status: built
+Decision: ship
 Updated: 2026-06-27
-Repo: TBD
+Repo: https://github.com/rogerchappel/skill-permission-matrix
 
 ## One-liner
 
