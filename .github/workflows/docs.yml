@@ -45,12 +45,30 @@ jobs:
             test -s "$file"
           done < markdown-files.txt
 
-      - name: Print docs customization TODO
+      - name: Validate relative markdown links
         run: |
           set -euo pipefail
 
-          if [ -f package.json ]; then
-            echo "Add docs build verification here when the repository has a docs toolchain."
-          else
-            echo "No package.json found; docs workflow is limited to markdown hygiene."
-          fi
+          find . -type f -name '*.md' -not -path './.git/*' -not -path './templates/*' -print0 |
+            xargs -0 perl -ne '
+              next if /`/;
+              while (/\[[^\]]+\]\(([^):#][^)]*)\)/g) {
+                my $target = $1;
+                $target =~ s/[?#].*//;
+                next if $target eq "" || $target =~ /^mailto:/ || $target =~ /^[a-zA-Z][a-zA-Z0-9+.-]*:\/\//;
+                print "$ARGV:$.:$target\n";
+              }
+            ' > markdown-relative-links.txt
+
+          while IFS=: read -r file _line target; do
+            dir=$(dirname "$file")
+            path="$dir/$target"
+            case "$target" in
+              /*) path=".$target" ;;
+            esac
+
+            test -e "$path" || {
+              echo "Broken markdown link in $file: $target"
+              exit 1
+            }
+          done < markdown-relative-links.txt
