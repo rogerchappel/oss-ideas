@@ -71,6 +71,15 @@ See the lifecycle folders for the full scored backlog:
 - Clear verification gates
 - Useful projects over vanity commit count
 
+## Limitations
+
+- Ideas in this repository are planning inputs, not claims that a shipped project
+  exists, has users, or is production-ready.
+- PRDs can lag behind the implementation once a separate project repository is
+  created; check the linked project repo before treating a PRD as current.
+- External market notes and competitor references are directional research and
+  should be rechecked before making roadmap or release decisions.
+
 ## License
 
 MIT
