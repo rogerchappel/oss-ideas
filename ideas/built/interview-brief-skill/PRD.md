@@ -1,6 +1,9 @@
 # Interview Brief Skill PRD
 
-Status: in-progress
+Status: built
+Repo: https://github.com/rogerchappel/interview-brief-skill
+PR: https://github.com/rogerchappel/interview-brief-skill/pull/1
+Classification: ship
 Owner: Roger Chappel
 Lane: oss-factory-agent-skills
 

@@ -1,6 +1,9 @@
 # Agent Run Digest Skill PRD
 
-Status: in-progress
+Status: built
+Repo: https://github.com/rogerchappel/agent-run-digest-skill
+PR: https://github.com/rogerchappel/agent-run-digest-skill/pull/1
+Classification: ship
 Owner: Roger Chappel
 Lane: oss-factory-agent-skills
 
