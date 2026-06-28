@@ -1,6 +1,9 @@
 # routecard-skill PRD
 
-Status: in-progress
+Status: built
+Classification: ship
+Repo: https://github.com/rogerchappel/routecard-skill
+Release Candidate PR: https://github.com/rogerchappel/routecard-skill/pull/1
 Owner: Roger Chappel
 Lane: agent-skill OSS factory
 Created: 2026-06-28

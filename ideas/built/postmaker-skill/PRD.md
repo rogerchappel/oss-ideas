@@ -1,6 +1,9 @@
 # postmaker-skill PRD
 
-Status: in-progress
+Status: built
+Classification: ship
+Repo: https://github.com/rogerchappel/postmaker-skill
+Release Candidate PR: https://github.com/rogerchappel/postmaker-skill/pull/1
 Owner: Roger Chappel
 Lane: agent-skill OSS factory
 Created: 2026-06-28
