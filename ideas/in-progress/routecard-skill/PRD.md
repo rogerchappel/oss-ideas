@@ -1,6 +1,6 @@
 # routecard-skill PRD
 
-Status: ready
+Status: in-progress
 Owner: Roger Chappel
 Lane: agent-skill OSS factory
 Created: 2026-06-28
