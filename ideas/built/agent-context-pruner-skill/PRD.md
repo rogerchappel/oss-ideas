@@ -1,6 +1,10 @@
 # Agent Context Pruner Skill PRD
 
-Status: in-progress
+Status: built
+
+Repo: https://github.com/rogerchappel/agent-context-pruner-skill
+Release Candidate PR: https://github.com/rogerchappel/agent-context-pruner-skill/pull/1
+Classification: ship
 
 ## Problem
 

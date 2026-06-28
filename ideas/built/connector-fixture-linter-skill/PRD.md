@@ -1,6 +1,10 @@
 # Connector Fixture Linter Skill PRD
 
-Status: in-progress
+Status: built
+
+Repo: https://github.com/rogerchappel/connector-fixture-linter-skill
+Release Candidate PR: https://github.com/rogerchappel/connector-fixture-linter-skill/pull/1
+Classification: ship
 
 ## Problem
 
