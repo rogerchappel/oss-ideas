@@ -1,6 +1,6 @@
 # PRD: action-approval-skill
 
-Status: ready
+Status: built
 Decision: build next
 Created: 2026-06-29
 
@@ -38,3 +38,10 @@ Connector and action workflows are safest when agents separate planning from exe
 ## Verification
 
 Run `npm test`, `npm run check`, `npm run build`, `npm run smoke`, `npm run package:smoke`, and fixture-based CLI checks for all proposal types.
+
+## Build Result
+
+- Classification: ship
+- Repo: https://github.com/rogerchappel/action-approval-skill
+- Release candidate PR: https://github.com/rogerchappel/action-approval-skill/pull/1
+- Built: 2026-06-30

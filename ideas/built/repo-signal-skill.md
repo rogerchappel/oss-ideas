@@ -1,6 +1,6 @@
 # PRD: repo-signal-skill
 
-Status: ready
+Status: built
 Decision: build next
 Created: 2026-06-29
 
@@ -38,3 +38,10 @@ Repo-to-content and launch workflows need repeatable source evidence. Agents oft
 ## Verification
 
 Run `npm test`, `npm run check`, `npm run build`, `npm run smoke`, `npm run package:smoke`, and one fixture CLI smoke.
+
+## Build Result
+
+- Classification: ship
+- Repo: https://github.com/rogerchappel/repo-signal-skill
+- Release candidate PR: https://github.com/rogerchappel/repo-signal-skill/pull/1
+- Built: 2026-06-30
