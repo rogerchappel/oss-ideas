@@ -1,6 +1,12 @@
 # agentcapsule PRD
 
-Status: in-progress
+Status: built
+Decision: ship
+Updated: 2026-06-29
+Repo: https://github.com/rogerchappel/agentcapsule
+Release candidate PR: https://github.com/rogerchappel/agentcapsule/pull/15
+
+Outcome: Added pre-pack capsule planning, archive/manifest validation, CLI smoke coverage, SKILL.md packaging, and release-candidate documentation for local-first agent handoff bundles.
 
 ## Summary
 
