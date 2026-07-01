@@ -1,8 +1,11 @@
 # Connector Route Replay Skill
 
-Status: ready
+Status: built
 Decision: build
 Updated: 2026-07-01
+
+Built Repo: https://github.com/rogerchappel/connector-route-replay-skill
+Release Candidate PR: https://github.com/rogerchappel/connector-route-replay-skill/pull/1
 
 ## Pitch
 

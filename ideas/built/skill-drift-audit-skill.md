@@ -1,8 +1,11 @@
 # Skill Drift Audit Skill
 
-Status: ready
+Status: built
 Decision: build
 Updated: 2026-07-01
+
+Built Repo: https://github.com/rogerchappel/skill-drift-audit-skill
+Release Candidate PR: https://github.com/rogerchappel/skill-drift-audit-skill/pull/1
 
 ## Pitch
 
