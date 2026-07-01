@@ -1,6 +1,6 @@
 # Connector Scope Audit Skill
 
-Status: ready
+Status: in-progress
 
 ## Summary
 
