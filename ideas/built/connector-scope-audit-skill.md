@@ -1,6 +1,12 @@
 # Connector Scope Audit Skill
 
-Status: in-progress
+Status: built
+
+## Build Result
+
+- Repo: https://github.com/rogerchappel/connector-scope-audit-skill
+- Release-candidate PR: https://github.com/rogerchappel/connector-scope-audit-skill/pull/1
+- Classification: ship
 
 ## Summary
 

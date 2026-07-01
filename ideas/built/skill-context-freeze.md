@@ -1,6 +1,12 @@
 # Skill Context Freeze
 
-Status: in-progress
+Status: built
+
+## Build Result
+
+- Repo: https://github.com/rogerchappel/skill-context-freeze
+- Release-candidate PR: https://github.com/rogerchappel/skill-context-freeze/pull/1
+- Classification: ship
 
 ## Summary
 
