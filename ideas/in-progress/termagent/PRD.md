@@ -1,7 +1,12 @@
 # termagent
 
 Status: in-progress
-Decision: in-progress
+Decision: ship
+Updated: 2026-07-03
+Repo: https://github.com/rogerchappel/termagent
+Release candidate PR: https://github.com/rogerchappel/termagent/pull/7
+
+Outcome: Added reusable agent SKILL.md packaging for terminal-agent proof-bundle review, npm tarball inclusion, README skill pointer, and release-candidate notes.
 
 ## Scorecard
 

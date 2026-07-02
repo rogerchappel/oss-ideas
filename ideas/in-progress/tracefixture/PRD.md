@@ -4,9 +4,10 @@ Status: in-progress
 Decision: ship
 Updated: 2026-06-20
 Repo: https://github.com/rogerchappel/tracefixture
-Release candidate PR: https://github.com/rogerchappel/tracefixture/pull/4
+Release candidate PR: https://github.com/rogerchappel/tracefixture/pull/7
 
 Outcome: Added replay-free fixture inspection CLI/API, agent SKILL.md packaging, tests, smoke coverage, and orchestration docs.
+Factory update 2026-07-03: Tightened the reusable agent skill workflow, side-effect approvals, and release-candidate notes for package review.
 
 Decision: build now
 Factory run: 2026-05-17 PM

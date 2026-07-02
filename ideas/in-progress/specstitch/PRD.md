@@ -1,6 +1,11 @@
 # specstitch PRD
 
 Status: in-progress
+Updated: 2026-07-03
+Repo: https://github.com/rogerchappel/specstitch
+Release candidate PR: https://github.com/rogerchappel/specstitch/pull/9
+
+Outcome: Added reusable agent SKILL.md packaging, npm tarball inclusion, README skill pointer, and release-candidate notes.
 
 ## One-liner
 `specstitch` builds a traceability quilt between PRDs, task lists, docs, tests, and source files — then highlights drift before it becomes archaeology. 🪡
