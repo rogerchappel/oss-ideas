@@ -1,8 +1,10 @@
 # connector-fixture-story-skill
 
-Status: ready
+Status: built
 Lane: agent-skill
 Owner: oss-factory-agent-skills
+Repo: https://github.com/rogerchappel/connector-fixture-story-skill
+PR: https://github.com/rogerchappel/connector-fixture-story-skill/pull/1
 
 ## Problem
 
@@ -32,4 +34,15 @@ The tool must never execute connector actions. It only inspects fixtures and emi
 
 ## Classification
 
-Target classification: ship after tests and release-candidate PR.
+ship
+
+## Verification
+
+- `npm test` passed
+- `npm run check` passed
+- `npm run smoke` passed
+- `bash scripts/validate.sh` passed
+
+## Notes
+
+Initial public build completed with `main` protected best-effort and release-candidate branch `release-candidate/connector-fixture-story-skill`.
