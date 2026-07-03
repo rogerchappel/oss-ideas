@@ -1,7 +1,7 @@
 # PRD: skill-example-miner-skill
 
-Status: in-progress
-Decision: in-progress
+Status: built
+Decision: ship
 
 ## Scorecard
 

@@ -1,7 +1,7 @@
 # PRD: agent-safety-case-skill
 
-Status: in-progress
-Decision: in-progress
+Status: built
+Decision: ship
 
 ## Scorecard
 

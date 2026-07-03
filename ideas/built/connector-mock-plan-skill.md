@@ -1,7 +1,7 @@
 # PRD: connector-mock-plan-skill
 
-Status: in-progress
-Decision: in-progress
+Status: built
+Decision: incubate
 
 ## Scorecard
 
