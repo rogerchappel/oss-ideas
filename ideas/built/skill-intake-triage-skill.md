@@ -1,6 +1,9 @@
 # Skill Intake Triage Skill
 
-Status: in-progress
+Status: built
+Classification: incubate
+Repo: https://github.com/rogerchappel/skill-intake-triage-skill
+PR: https://github.com/rogerchappel/skill-intake-triage-skill/pull/1
 
 ## Summary
 
@@ -29,4 +32,3 @@ The tool must be read-only. It should never install, apply, approve, or invoke a
 - Product docs and orchestration docs
 - Smoke command and tests
 - Public repo under `rogerchappel/skill-intake-triage-skill`
-

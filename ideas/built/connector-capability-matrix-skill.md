@@ -1,6 +1,9 @@
 # Connector Capability Matrix Skill
 
-Status: in-progress
+Status: built
+Classification: incubate
+Repo: https://github.com/rogerchappel/connector-capability-matrix-skill
+PR: https://github.com/rogerchappel/connector-capability-matrix-skill/pull/1
 
 ## Summary
 
@@ -29,4 +32,3 @@ The tool must not call live connectors or mutate remote accounts. It only evalua
 - Product docs and orchestration docs
 - Smoke command and tests
 - Public repo under `rogerchappel/connector-capability-matrix-skill`
-

@@ -1,6 +1,9 @@
 # Run Retro Skill
 
-Status: in-progress
+Status: built
+Classification: incubate
+Repo: https://github.com/rogerchappel/run-retro-skill
+PR: https://github.com/rogerchappel/run-retro-skill/pull/1
 
 ## Summary
 
@@ -29,4 +32,3 @@ The tool must be offline and redact obvious secrets from reports. It must not up
 - Product docs and orchestration docs
 - Smoke command and tests
 - Public repo under `rogerchappel/run-retro-skill`
-
