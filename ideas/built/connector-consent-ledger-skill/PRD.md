@@ -1,7 +1,7 @@
 # PRD: connector-consent-ledger-skill
 
-Status: ready
-Decision: build now
+Status: built
+Decision: built 2026-07-05
 Created: 2026-07-04
 
 ## Pitch
