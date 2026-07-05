@@ -1,6 +1,12 @@
 # PromptLintel PRD
 
 Status: in-progress
+Decision: ship
+Updated: 2026-07-06
+Repo: https://github.com/rogerchappel/promptlintel
+Release candidate PR: https://github.com/rogerchappel/promptlintel/pull/6
+
+Outcome: Added reusable agent SKILL.md packaging, report severity/category summaries, unbounded tool-execution rule coverage, package inclusion, and release-candidate notes.
 
 ## Summary
 

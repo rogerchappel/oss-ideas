@@ -1,6 +1,12 @@
 # sessiondiff PRD
 
 Status: in-progress
+Decision: ship
+Updated: 2026-07-06
+Repo: https://github.com/rogerchappel/sessiondiff
+Release candidate PR: https://github.com/rogerchappel/sessiondiff/pull/14
+
+Outcome: Added reusable agent SKILL.md packaging, approval/blocker extraction, conservative run verdicts, fixture-backed tests, package inclusion, and release-candidate notes.
 
 ## Summary
 
@@ -49,4 +55,3 @@ service.
   commands, files, and verification claims.
 - JSON output is stable enough for CI snapshots.
 - README explains supported inputs and privacy boundaries.
-
