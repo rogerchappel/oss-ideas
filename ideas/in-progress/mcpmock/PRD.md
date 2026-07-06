@@ -1,6 +1,12 @@
 # MCPMock PRD
 
 Status: in-progress
+Decision: ship
+Updated: 2026-07-06
+Repo: https://github.com/rogerchappel/mcpmock
+Release candidate PR: https://github.com/rogerchappel/mcpmock/pull/15
+
+Outcome: Added reusable agent SKILL.md packaging, package-surface checks for the skill doc, validation coverage, and release-candidate notes.
 
 ## One-liner
 
@@ -45,4 +51,3 @@ MCPMock is deliberately boring: plain files in, deterministic tool behavior out.
 
 Inspired by the Model Context Protocol tool concept documentation:
 https://modelcontextprotocol.io/docs/concepts/tools
-

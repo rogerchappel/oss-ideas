@@ -2,6 +2,11 @@
 
 Status: in-progress
 Decision: build now
+Updated: 2026-07-06
+Repo: https://github.com/rogerchappel/actionloom
+Release candidate PR: https://github.com/rogerchappel/actionloom/pull/19
+
+Outcome: Added reusable agent SKILL.md packaging, package-surface checks for the skill doc, validation coverage, and release-candidate notes.
 
 ## Scorecard
 
