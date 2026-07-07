@@ -1,6 +1,9 @@
 # skillrun-ci-harness
 
-Status: ready
+Status: built
+Classification: ship
+Repo: https://github.com/rogerchappel/skillrun-ci-harness
+PR: https://github.com/rogerchappel/skillrun-ci-harness/pull/1
 Type: agent-skill OSS repo
 
 ## Problem

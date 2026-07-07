@@ -1,6 +1,9 @@
 # skill-issue-drafter
 
-Status: ready
+Status: built
+Classification: ship
+Repo: https://github.com/rogerchappel/skill-issue-drafter
+PR: https://github.com/rogerchappel/skill-issue-drafter/pull/1
 Type: agent-skill OSS repo
 
 ## Problem
