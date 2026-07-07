@@ -1,6 +1,10 @@
 # PRD: agent-decision-log-skill
 
-Status: in-progress
+Status: built
+Decision: built by OSS Factory Agent Skills on 2026-07-08
+Classification: ship
+Repository: https://github.com/rogerchappel/agent-decision-log-skill
+Pull Request: https://github.com/rogerchappel/agent-decision-log-skill/pull/1
 Source: created by OSS Factory Agent Skills queue replenishment on 2026-07-08
 Owner: Neo
 
