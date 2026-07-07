@@ -1,6 +1,6 @@
 # PRD: connector-preflight-skill
 
-Status: ready
+Status: in-progress
 Source: created by OSS Factory Agent Skills queue replenishment on 2026-07-08
 Owner: Neo
 
