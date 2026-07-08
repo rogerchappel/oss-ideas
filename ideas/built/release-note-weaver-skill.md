@@ -1,6 +1,6 @@
 # release-note-weaver-skill
 
-Status: in-progress
+Status: built
 Lane: agent-skill
 Created: 2026-07-08
 Source: cron queue replenishment after `ideas/ready` contained only README and no backlog directory existed.
@@ -31,3 +31,11 @@ Agents often finish useful repo work but leave scattered proof: task docs, smoke
 ## Classification Target
 
 Ship if another agent can use it to create accurate PR bodies and release notes from local repo evidence.
+
+## Build Result
+
+- Classification: ship
+- Repo: https://github.com/rogerchappel/release-note-weaver-skill
+- Release-candidate branch: `release-candidate/release-note-weaver-skill`
+- PR: https://github.com/rogerchappel/release-note-weaver-skill/pull/1
+- Verification: `npm test`, `npm run check`, `npm run smoke` passed.
