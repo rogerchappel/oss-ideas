@@ -1,6 +1,10 @@
 # agent-action-simulator
 
-Status: in-progress
+Status: built
+
+Repo: https://github.com/rogerchappel/agent-action-simulator
+Release candidate PR: https://github.com/rogerchappel/agent-action-simulator/pull/1
+Classification: ship
 
 ## Summary
 
@@ -36,3 +40,11 @@ Agents often prepare connector actions such as CRM updates, project-management c
 - Tests cover allowed, approval-required, blocked, malformed, and unknown actions.
 - CLI smoke command runs against fixtures.
 - Release-candidate checklist records dry-run guarantees and limitations.
+
+## Build result
+
+- `npm test` - pass, 2 tests.
+- `npm run check` - pass.
+- `npm run smoke` - pass.
+- `node src/cli.js fixtures/actions.json --policy fixtures/policy.json --format json` - pass.
+- Main branch protection applied.

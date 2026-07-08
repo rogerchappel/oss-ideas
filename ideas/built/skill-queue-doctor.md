@@ -1,6 +1,10 @@
 # skill-queue-doctor
 
-Status: in-progress
+Status: built
+
+Repo: https://github.com/rogerchappel/skill-queue-doctor
+Release candidate PR: https://github.com/rogerchappel/skill-queue-doctor/pull/1
+Classification: ship
 
 ## Summary
 
@@ -36,3 +40,11 @@ Agent skill factory runs can stall when `ideas/ready` is empty, backlog folders 
 - Fixture-backed tests for queue audit, duplicate detection, and PRD rendering.
 - CLI smoke command using sample fixtures.
 - Release-candidate checklist documents known limitations.
+
+## Build result
+
+- `npm test` - pass, 6 tests.
+- `npm run check` - pass.
+- `npm run smoke` - pass.
+- `node src/cli.js draft fixtures/candidate.json --out /tmp/skill-queue-doctor-drafts` - pass.
+- Main branch protection applied.
