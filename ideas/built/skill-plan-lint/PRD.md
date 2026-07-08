@@ -1,6 +1,6 @@
 # PRD: skill-plan-lint
 
-Status: ready
+Status: built
 Decision: build now
 Updated: 2026-07-08
 Repo: https://github.com/rogerchappel/skill-plan-lint
@@ -35,3 +35,10 @@ Reusable skills often omit when to use them, required inputs, side-effect bounda
 ## Verification
 
 Run `npm test`, `npm run check`, `npm run build`, `npm run smoke`, and `bash scripts/validate.sh`.
+
+## Factory Outcome 2026-07-08
+
+Decision: ship
+Repo: https://github.com/rogerchappel/skill-plan-lint
+Release candidate PR: https://github.com/rogerchappel/skill-plan-lint/pull/1
+Outcome: Built local-first agent skill instruction linter with JSON/Markdown reports, fixture-backed tests, SKILL.md, and release-candidate PR.

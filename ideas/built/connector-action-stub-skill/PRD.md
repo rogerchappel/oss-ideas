@@ -1,6 +1,6 @@
 # PRD: connector-action-stub-skill
 
-Status: ready
+Status: built
 Decision: build now
 Updated: 2026-07-08
 Repo: https://github.com/rogerchappel/connector-action-stub-skill
@@ -35,3 +35,10 @@ Agents need to plan email, CRM, project-management, and messaging actions withou
 ## Verification
 
 Run `npm test`, `npm run check`, `npm run build`, `npm run smoke`, and `bash scripts/validate.sh`.
+
+## Factory Outcome 2026-07-08
+
+Decision: ship
+Repo: https://github.com/rogerchappel/connector-action-stub-skill
+Release candidate PR: https://github.com/rogerchappel/connector-action-stub-skill/pull/1
+Outcome: Built connector action dry-run stub generator with plan, fixture, skill-guide outputs, tests, SKILL.md, and release-candidate PR.
