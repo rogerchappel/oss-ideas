@@ -1,6 +1,6 @@
 # skill-manifest-audit-skill
 
-Status: ready
+Status: in-progress
 Lane: agent-skill
 Created: 2026-07-08
 Source: cron queue replenishment after `ideas/ready` contained only README and no backlog directory existed.
