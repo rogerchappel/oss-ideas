@@ -1,6 +1,6 @@
 # Connector Incident Dry-Run Skill PRD
 
-Status: ready
+Status: in-progress
 
 ## Summary
 
