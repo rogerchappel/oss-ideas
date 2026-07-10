@@ -1,6 +1,6 @@
 # Skill Spec Lint PRD
 
-Status: ready
+Status: in-progress
 Owner: Roger Chappell
 Date: 2026-07-10
 
