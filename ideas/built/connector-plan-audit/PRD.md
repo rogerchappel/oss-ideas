@@ -1,6 +1,6 @@
 # Connector Plan Audit PRD
 
-Status: in-progress
+Status: built
 Owner: Roger Chappell
 Date: 2026-07-10
 
@@ -34,3 +34,8 @@ Agent skills and connector action plans are often reviewed by reading prose manu
 - npm run smoke passes against included fixtures.
 - README documents quickstart, examples, limitations, and safety notes.
 - docs/ORCHESTRATION.md explains agent handoff and verification.
+
+## Build Result
+
+Repository: https://github.com/rogerchappel/connector-plan-audit
+Classification: ship
