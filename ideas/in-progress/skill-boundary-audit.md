@@ -1,6 +1,6 @@
 # skill-boundary-audit
 
-Status: ready
+Status: in-progress
 Lane: agent-skill
 Classification target: ship
 

@@ -1,6 +1,6 @@
 # agent-stepback-skill
 
-Status: ready
+Status: in-progress
 Lane: agent-skill
 Classification target: incubate
 
