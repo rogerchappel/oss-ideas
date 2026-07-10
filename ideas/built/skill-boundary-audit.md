@@ -1,6 +1,9 @@
 # skill-boundary-audit
 
-Status: in-progress
+Status: built
+Classification: ship
+Repo: https://github.com/rogerchappel/skill-boundary-audit
+PR: https://github.com/rogerchappel/skill-boundary-audit/pull/1
 Lane: agent-skill
 Classification target: ship
 

@@ -1,6 +1,9 @@
 # agent-stepback-skill
 
-Status: in-progress
+Status: built
+Classification: incubate
+Repo: https://github.com/rogerchappel/agent-stepback-skill
+PR: https://github.com/rogerchappel/agent-stepback-skill/pull/1
 Lane: agent-skill
 Classification target: incubate
 
