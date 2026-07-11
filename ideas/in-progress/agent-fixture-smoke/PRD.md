@@ -1,6 +1,6 @@
 # PRD: agent-fixture-smoke
 
-Status: ready
+Status: in-progress
 Decision: build now
 Updated: 2026-07-11
 
@@ -30,4 +30,3 @@ Agent skills and connectors need cheap confidence checks before release. Maintai
 ## Verification
 
 Run `npm test`, `npm run check`, `npm run build`, `npm run smoke`, `bash scripts/validate.sh`, and a CLI fixture smoke run.
-

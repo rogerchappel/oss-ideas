@@ -1,6 +1,6 @@
 # PRD: skill-sideeffect-map
 
-Status: ready
+Status: in-progress
 Decision: build now
 Updated: 2026-07-11
 
@@ -30,4 +30,3 @@ Agent skills are often copied between hosts without a shared safety review. A de
 ## Verification
 
 Run `npm test`, `npm run check`, `npm run build`, `npm run smoke`, `bash scripts/validate.sh`, and a CLI fixture scan.
-
