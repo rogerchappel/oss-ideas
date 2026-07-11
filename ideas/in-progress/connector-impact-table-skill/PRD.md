@@ -1,6 +1,6 @@
 # Connector Impact Table Skill PRD
 
-Status: ready
+Status: in-progress
 Created: 2026-07-11
 
 ## Summary
@@ -47,4 +47,3 @@ before granting permission.
 - `docs/PRD.md`, `docs/TASKS.md`, and `docs/ORCHESTRATION.md` exist.
 - Public repo `rogerchappel/connector-impact-table-skill` is created with one
   release-candidate PR.
-

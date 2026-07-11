@@ -1,6 +1,6 @@
 # Skill Trace Sampler PRD
 
-Status: ready
+Status: in-progress
 Created: 2026-07-11
 
 ## Summary
@@ -47,4 +47,3 @@ skip fixture coverage or paste unsafe excerpts into docs.
 - `docs/PRD.md`, `docs/TASKS.md`, and `docs/ORCHESTRATION.md` exist.
 - Public repo `rogerchappel/skill-trace-sampler` is created with one
   release-candidate PR.
-
