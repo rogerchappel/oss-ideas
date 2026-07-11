@@ -1,7 +1,14 @@
 # Skill Trace Sampler PRD
 
-Status: in-progress
+Status: built
 Created: 2026-07-11
+Decision: ship
+Repo: https://github.com/rogerchappel/skill-trace-sampler
+Release candidate PR: https://github.com/rogerchappel/skill-trace-sampler/pull/1
+
+Outcome: Built a public local-first TypeScript CLI and reusable agent skill for
+sampling agent transcripts into redacted fixture packs, with docs, examples,
+fixture-backed tests, smoke validation, and branch protection.
 
 ## Summary
 

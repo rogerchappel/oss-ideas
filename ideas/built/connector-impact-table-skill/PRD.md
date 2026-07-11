@@ -1,7 +1,15 @@
 # Connector Impact Table Skill PRD
 
-Status: in-progress
+Status: built
 Created: 2026-07-11
+Decision: ship
+Repo: https://github.com/rogerchappel/connector-impact-table-skill
+Release candidate PR: https://github.com/rogerchappel/connector-impact-table-skill/pull/1
+
+Outcome: Built a public local-first TypeScript CLI and reusable agent skill for
+reviewing planned connector actions as deterministic impact tables before
+external writes, with docs, examples, fixture-backed tests, smoke validation,
+and branch protection.
 
 ## Summary
 
