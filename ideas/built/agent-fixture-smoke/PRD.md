@@ -1,8 +1,12 @@
 # PRD: agent-fixture-smoke
 
-Status: in-progress
+Status: built
 Decision: build now
 Updated: 2026-07-11
+Repo: https://github.com/rogerchappel/agent-fixture-smoke
+Release candidate PR: https://github.com/rogerchappel/agent-fixture-smoke/pull/1
+
+Outcome: Built local-first Node CLI for fixture smoke plans, dry-run release reports, executable local fixture runs, and forbidden side-effect blocking. Classified as ship.
 
 ## Pitch
 

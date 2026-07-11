@@ -1,8 +1,12 @@
 # PRD: skill-sideeffect-map
 
-Status: in-progress
+Status: built
 Decision: build now
 Updated: 2026-07-11
+Repo: https://github.com/rogerchappel/skill-sideeffect-map
+Release candidate PR: https://github.com/rogerchappel/skill-sideeffect-map/pull/1
+
+Outcome: Built local-first Node CLI for scanning skill docs, classifying side effects, checking approval language, and rendering JSON/Markdown evidence. Classified as ship.
 
 ## Pitch
 
