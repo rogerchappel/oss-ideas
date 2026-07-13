@@ -1,6 +1,6 @@
 # run-artifact-index-skill
 
-Status: ready
+Status: built
 Created: 2026-07-13
 Source: oss-factory-agent-skills queue replenishment
 
@@ -39,4 +39,3 @@ Long agent runs leave screenshots, logs, generated reports, fixtures, and packag
 - CLI smoke command against sample run artifacts.
 - Package/import smoke.
 - Release-candidate checklist with known limitations.
-

@@ -1,6 +1,6 @@
 # skill-approval-brief-skill
 
-Status: ready
+Status: built
 Created: 2026-07-13
 Source: oss-factory-agent-skills queue replenishment
 
@@ -39,4 +39,3 @@ Agents often ask for approval with vague wording. Operators need approval prompt
 - CLI smoke for both approval-required and blocked examples.
 - Package/import smoke.
 - Release-candidate notes covering limitations and non-goals.
-
