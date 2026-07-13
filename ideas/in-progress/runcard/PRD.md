@@ -3,7 +3,7 @@
 Status: in-progress
 Updated: 2026-07-14
 Repo: https://github.com/rogerchappel/runcard
-Release candidate PR: pending update from release-candidate/runcard
+Release candidate PR: https://github.com/rogerchappel/runcard/pull/3
 
 Outcome: Added `--fail-on-warnings` for CI/release gates, packaged `SKILL.md`, and refreshed release-candidate skill usage docs.
 

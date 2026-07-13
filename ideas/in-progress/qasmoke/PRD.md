@@ -5,7 +5,7 @@ Factory selection: 2026-05-25 AM OSS factory run
 Decision: in-progress
 Updated: 2026-07-14
 Repo: https://github.com/rogerchappel/qasmoke
-Release candidate PR: pending update from release-candidate/qasmoke
+Release candidate PR: https://github.com/rogerchappel/qasmoke/pull/27
 
 Outcome: Added Markdown smoke reports for PR comments, fixture-backed formatter coverage, packaged `SKILL.md`, and refreshed release-candidate skill usage docs.
 

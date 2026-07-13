@@ -3,7 +3,7 @@
 Status: in-progress
 Updated: 2026-07-14
 Repo: https://github.com/rogerchappel/prooftrace
-Release candidate PR: pending update from release-candidate/prooftrace
+Release candidate PR: https://github.com/rogerchappel/prooftrace/pull/13
 
 Outcome: Added copied shell-log parsing into command evidence stubs, fixture-backed parser tests, packaged `SKILL.md`, and refreshed release-candidate skill usage docs.
 
