@@ -1,6 +1,6 @@
 # skilldeps
 
-Status: in-progress
+Status: built
 
 ## Summary
 
@@ -26,3 +26,10 @@ Local read-only analysis only. It must not install skills, execute referenced sc
 ## Classification Target
 
 ship
+
+## Build Result
+
+- Repo: https://github.com/rogerchappel/skilldeps
+- Release-candidate PR: https://github.com/rogerchappel/skilldeps/pull/1
+- Classification: ship
+- Verification: `npm test`, `npm run check`, `npm run smoke`, `npm pack --dry-run`

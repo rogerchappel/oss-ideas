@@ -1,6 +1,6 @@
 # approvaldrift
 
-Status: in-progress
+Status: built
 
 ## Summary
 
@@ -26,3 +26,10 @@ The tool is analysis-only and must never execute the actions it reads. It should
 ## Classification Target
 
 ship
+
+## Build Result
+
+- Repo: https://github.com/rogerchappel/approvaldrift
+- Release-candidate PR: https://github.com/rogerchappel/approvaldrift/pull/1
+- Classification: ship
+- Verification: `npm test`, `npm run check`, `npm run smoke`, `npm pack --dry-run`
