@@ -1,6 +1,11 @@
 # runcard PRD
 
 Status: in-progress
+Updated: 2026-07-14
+Repo: https://github.com/rogerchappel/runcard
+Release candidate PR: pending update from release-candidate/runcard
+
+Outcome: Added `--fail-on-warnings` for CI/release gates, packaged `SKILL.md`, and refreshed release-candidate skill usage docs.
 
 ## Summary
 
@@ -46,4 +51,3 @@ and scripts, but those clues need to be normalized into one reliable run card.
 - `runcard scan --fixture node-cli` produces a useful markdown run card.
 - Tests cover detection and ranking.
 - README makes the output practical for humans and agents.
-

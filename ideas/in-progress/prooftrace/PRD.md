@@ -1,6 +1,11 @@
 # ProofTrace PRD
 
 Status: in-progress
+Updated: 2026-07-14
+Repo: https://github.com/rogerchappel/prooftrace
+Release candidate PR: pending update from release-candidate/prooftrace
+
+Outcome: Added copied shell-log parsing into command evidence stubs, fixture-backed parser tests, packaged `SKILL.md`, and refreshed release-candidate skill usage docs.
 
 ## Summary
 
