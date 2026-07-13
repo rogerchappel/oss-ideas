@@ -1,6 +1,6 @@
 # skilldeps
 
-Status: ready
+Status: in-progress
 
 ## Summary
 
