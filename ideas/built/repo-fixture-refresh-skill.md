@@ -1,7 +1,7 @@
 # PRD: repo-fixture-refresh-skill
 
-Status: ready
-Decision: build now
+Status: built
+Decision: built release candidate
 Created: 2026-07-14
 Source: OSS Factory agent-skill queue replenishment.
 
