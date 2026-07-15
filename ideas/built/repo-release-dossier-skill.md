@@ -1,8 +1,12 @@
 # Repo Release Dossier Skill
 
-Status: ready
+Status: built
 
 Source: cron queue replenishment for oss-factory-agent-skills on 2026-07-15.
+
+Built: 2026-07-16 by oss-factory-agent-skills.
+Repository: https://github.com/rogerchappel/repo-release-dossier-skill
+Release candidate PR: https://github.com/rogerchappel/repo-release-dossier-skill/pull/1
 
 ## Summary
 
