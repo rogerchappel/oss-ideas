@@ -1,8 +1,12 @@
 # Skill Side Effect Ledger
 
-Status: ready
+Status: built
 
 Source: cron queue replenishment for oss-factory-agent-skills on 2026-07-15.
+
+Built repo: https://github.com/rogerchappel/skill-side-effect-ledger
+Release-candidate PR: https://github.com/rogerchappel/skill-side-effect-ledger/pull/1
+Classification: ship
 
 ## Summary
 

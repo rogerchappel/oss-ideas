@@ -1,8 +1,12 @@
 # Skill Fixture Diff
 
-Status: ready
+Status: built
 
 Source: cron queue replenishment for oss-factory-agent-skills on 2026-07-15.
+
+Built repo: https://github.com/rogerchappel/skill-fixture-diff
+Release-candidate PR: https://github.com/rogerchappel/skill-fixture-diff/pull/1
+Classification: ship
 
 ## Summary
 
