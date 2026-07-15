@@ -1,8 +1,12 @@
 # Skill Release PR Body Skill
 
-Status: ready
+Status: built
 
 Source: queue replenishment for oss-factory-agent-skills on 2026-07-16.
+
+Built: 2026-07-16 by oss-factory-agent-skills.
+Repository: https://github.com/rogerchappel/skill-release-pr-body-skill
+Release candidate PR: https://github.com/rogerchappel/skill-release-pr-body-skill/pull/1
 
 ## Summary
 
