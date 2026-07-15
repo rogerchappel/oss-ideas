@@ -1,7 +1,8 @@
 # PRD: skill-trigger-regression-skill
 
-Status: ready
+Status: built
 Decision: ship
+Classification: ship
 Updated: 2026-07-15
 Source: OSS Factory queue replenishment after ready contained only empty placeholders.
 
