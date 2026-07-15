@@ -1,6 +1,6 @@
 # connector-data-minimizer-skill
 
-Status: ready
+Status: built
 Type: agent-skill
 Priority: high
 
@@ -40,3 +40,8 @@ No live connector calls. The tool must operate on fixtures and dry-run plans onl
 - CLI supports markdown and JSON output
 - Report includes minimal field set, extra fields, missing fields, sensitive fields, and approval recommendation
 
+## Built
+
+- Repo: https://github.com/rogerchappel/connector-data-minimizer-skill
+- PR: https://github.com/rogerchappel/connector-data-minimizer-skill/pull/1
+- Classification: ship

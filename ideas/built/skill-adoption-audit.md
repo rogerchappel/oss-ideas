@@ -1,6 +1,6 @@
 # skill-adoption-audit
 
-Status: ready
+Status: built
 Type: agent-skill
 Priority: high
 
@@ -40,3 +40,8 @@ Read-only filesystem inspection. No network calls, package publishing, repositor
 - CLI checks required skill sections, examples, side-effect boundaries, validation workflow, docs, fixtures, and package metadata
 - Report separates blockers, warnings, and passing adoption evidence
 
+## Built
+
+- Repo: https://github.com/rogerchappel/skill-adoption-audit
+- PR: https://github.com/rogerchappel/skill-adoption-audit/pull/1
+- Classification: ship
