@@ -1,6 +1,14 @@
 # LogVeil PRD
 
 Status: in-progress
+Decision: ship
+Updated: 2026-07-16
+Repo: https://github.com/rogerchappel/logveil
+Release candidate PR: https://github.com/rogerchappel/logveil/pull/21
+
+Outcome: Added explicit `--write --out-dir` sanitized-copy behavior with a
+write manifest, package-included `SKILL.md`, README safety workflow, tests, and
+release-check evidence.
 
 ## Summary
 

@@ -1,6 +1,14 @@
 # secretshape PRD
 
 Status: in-progress
+Decision: ship
+Updated: 2026-07-16
+Repo: https://github.com/rogerchappel/secretshape
+Release candidate PR: https://github.com/rogerchappel/secretshape/pull/13
+
+Outcome: Added explicit `--fail-on-warning` CI gating for stale documented
+secret names, package-included `SKILL.md`, README workflow coverage, tests, and
+release-check evidence.
 
 ## Summary
 

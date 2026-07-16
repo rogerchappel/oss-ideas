@@ -1,6 +1,16 @@
 # Agent Run Redaction Skill
 
-Status: ready
+Status: kill/merge
+Decision: merge into LogVeil and SecretShape release-candidate work
+Updated: 2026-07-16
+
+Outcome: This PRD directly overlapped the existing public `logveil` and
+`skill-redaction-audit`/redaction-tool lane. The factory run avoided a duplicate
+thin repo and instead improved `logveil` with explicit sanitized-copy writes,
+agent `SKILL.md` packaging, package inclusion, tests, and release-candidate PR
+evidence.
+
+Merged target: https://github.com/rogerchappel/logveil/pull/21
 
 Source: queue replenishment for oss-factory-agent-skills on 2026-07-16.
 
