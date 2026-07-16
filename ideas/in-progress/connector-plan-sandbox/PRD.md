@@ -4,6 +4,11 @@ Status: in-progress
 Decision: build now
 Updated: 2026-07-16
 Source: oss-factory-agent-skills queue replenishment after ready queue shortage.
+Repo: https://github.com/rogerchappel/connector-plan-sandbox
+Release candidate PR: https://github.com/rogerchappel/connector-plan-sandbox/pull/1
+Outcome: Built public local-first CLI/library with docs, SKILL.md, fixtures,
+tests, smoke command, branch protection, and release-candidate evidence.
+Classification: ship
 
 ## Pitch
 
@@ -34,5 +39,4 @@ builders test those plans with fixtures instead of live accounts.
 ## Verification
 
 Run `npm test`, `npm run check`, `npm run build`, `npm run smoke`, and
-`bash scripts/validate.sh`.
-
+`bash scripts/validate.sh`. All passed in the initial public build.
