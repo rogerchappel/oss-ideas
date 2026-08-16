@@ -46,29 +46,7 @@ jobs:
           done < markdown-files.txt
 
       - name: Validate relative markdown links
-        run: |
-          set -euo pipefail
+        run: scripts/check-relative-markdown-links.sh
 
-          find . -type f -name '*.md' -not -path './.git/*' -not -path './templates/*' -print0 |
-            xargs -0 perl -ne '
-              next if /`/;
-              while (/\[[^\]]+\]\(([^):#][^)]*)\)/g) {
-                my $target = $1;
-                $target =~ s/[?#].*//;
-                next if $target eq "" || $target =~ /^mailto:/ || $target =~ /^[a-zA-Z][a-zA-Z0-9+.-]*:\/\//;
-                print "$ARGV:$.:$target\n";
-              }
-            ' > markdown-relative-links.txt
-
-          while IFS=: read -r file _line target; do
-            dir=$(dirname "$file")
-            path="$dir/$target"
-            case "$target" in
-              /*) path=".$target" ;;
-            esac
-
-            test -e "$path" || {
-              echo "Broken markdown link in $file: $target"
-              exit 1
-            }
-          done < markdown-relative-links.txt
+      - name: Test relative markdown link validation
+        run: scripts/test-check-relative-markdown-links.sh
