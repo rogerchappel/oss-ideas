@@ -5,6 +5,8 @@ on:
     paths:
       - '**/*.md'
       - 'docs/**'
+      - 'scripts/check-relative-markdown-links.sh'
+      - 'scripts/test-check-relative-markdown-links.sh'
       - '.github/workflows/docs.yml'
   push:
     branches:
@@ -12,6 +14,8 @@ on:
     paths:
       - '**/*.md'
       - 'docs/**'
+      - 'scripts/check-relative-markdown-links.sh'
+      - 'scripts/test-check-relative-markdown-links.sh'
       - '.github/workflows/docs.yml'
   workflow_dispatch:
 
